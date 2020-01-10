@@ -10,3 +10,21 @@ Gatsby를 이용하여 블로그를 만들기 위해서는 다음과 같은 사�
 1. Gatsby & Netlify
 2. React
 3. GraphQL
+
+```javascript
+const Head = ({ title }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
+  return <Helmet title={`${title} | ${data.site.siteMetadata.title}`} />;
+};
+export default Head;
+Value = [];
+}
+```

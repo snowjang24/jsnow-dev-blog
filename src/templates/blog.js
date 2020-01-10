@@ -15,14 +15,12 @@ export const query = graphql`
   }
 `;
 
-const Blog = props => {
+const Blog = ({ data }) => {
   return (
-    <Layout title={props.data.markdownRemark.frontmatter.title}>
-      <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-      <p>{props.data.markdownRemark.frontmatter.date}</p>
-      <div
-        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-      ></div>
+    <Layout title={data.markdownRemark.frontmatter.title}>
+      <h1>{data.markdownRemark.frontmatter.title}</h1>
+      <p>{data.markdownRemark.frontmatter.date}</p>
+      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
     </Layout>
   );
 };
