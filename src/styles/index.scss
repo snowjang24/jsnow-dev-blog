@@ -6,6 +6,14 @@
   font-style: normal;
   font-weight: normal;
 }
+
+@font-face {
+  font-family: "D2Coding";
+  src: url("../../static/fonts/D2Coding.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -621,38 +629,35 @@ pre tt:after {
 }
 
 .gatsby-highlight {
-  font-size: 14px;
-  > pre {
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  font-size: 0.875rem;
+  pre[class*="language-"] {
     background: #29292e;
-    > code {
-      font-weight: 400;
-      white-space: pre-wrap;
+    &::before {
+      background: black;
+      border-radius: 0 0 0.25rem 0.25rem;
+      color: white;
+      font-size: 0.688rem;
+      font-weight: bold;
+      font-family: inherit;
+      letter-spacing: 0.025rem;
+      padding: 0.1rem 0.5rem;
+      position: absolute;
+      right: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: none;
+      top: 0;
     }
+  }
+  code {
+    font-weight: 400;
+    white-space: pre-wrap;
+    font-family: "D2Coding", "Andale Mono", "Ubuntu Mono", monospace;
   }
 }
 
-.gatsby-highlight {
-  position: relative;
-  -webkit-overflow-scrolling: touch;
-}
-.gatsby-highlight pre[class*="language-"] {
-  -webkit-overflow-scrolling: touch;
-}
-.gatsby-highlight pre[class*="language-"]::before {
-  background: black;
-  border-radius: 0 0 0.25rem 0.25rem;
-  color: white;
-  font-size: 0.688rem;
-  font-weight: bold;
-  letter-spacing: 0.025rem;
-  padding: 0.1rem 0.5rem;
-  position: absolute;
-  right: 1rem;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: none;
-  top: 0;
-}
 .gatsby-highlight pre[class="language-javascript"]::before {
   content: "js";
   background: #f7df1e;
