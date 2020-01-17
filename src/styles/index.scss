@@ -1,19 +1,21 @@
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
 
 @font-face {
-  font-family: "Noto Sans KR";
-  src: url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean");
+  font-family: "Ridi Batang";
+  src: url("../../static/fonts/RIDIBatang.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
 }
-
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Ridi Batang", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #eee;
 }
 article,
 aside,
@@ -621,9 +623,82 @@ pre tt:after {
 .gatsby-highlight {
   font-size: 14px;
   > pre {
-    background: black;
+    background: #29292e;
     > code {
       font-weight: 400;
+      white-space: pre-wrap;
     }
   }
+}
+
+.gatsby-highlight {
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+.gatsby-highlight pre[class*="language-"] {
+  -webkit-overflow-scrolling: touch;
+}
+.gatsby-highlight pre[class*="language-"]::before {
+  background: black;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: white;
+  font-size: 0.688rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: none;
+  top: 0;
+}
+.gatsby-highlight pre[class="language-javascript"]::before {
+  content: "js";
+  background: #f7df1e;
+  color: #000;
+}
+.gatsby-highlight pre[class="language-jsx"]::before {
+  content: "jsx";
+  background: #2a2c2e;
+  color: #54c1de;
+}
+.gatsby-highlight pre[class="language-html"]::before {
+  content: "html";
+  background: #ee7731;
+  color: #000;
+}
+.gatsby-highlight pre[class="language-css"]::before {
+  content: "css";
+  background: #018bd0;
+  color: #000;
+}
+.gatsby-highlight pre[class="language-bash"]::before {
+  content: "bash";
+  background: #3c4548;
+  color: #45af50;
+}
+
+.gatsby-highlight pre[class="language-python"]::before {
+  content: "python";
+  background: #3576aa;
+  color: #ffdb49;
+}
+
+.gatsby-highlight pre[class="language-python"]::before {
+  content: "python";
+  background: #3576aa;
+  color: #ffdb49;
+}
+
+.gatsby-highlight pre[class="language-typescript"]::before {
+  content: "typescript";
+  background: #0075c1;
+  color: #fff;
+}
+
+.gatsby-highlight pre[class="language-json"]::before {
+  content: "json";
+  background: #353535;
+  color: #fff;
 }

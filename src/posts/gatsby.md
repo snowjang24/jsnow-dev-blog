@@ -11,7 +11,7 @@ Gatsby를 이용하여 블로그를 만들기 위해서는 다음과 같은 사�
 2. React
 3. GraphQL
 
-```javascript
+```jsx
 const Head = ({ title }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -26,5 +26,45 @@ const Head = ({ title }) => {
 };
 export default Head;
 Value = [];
+}
+```
+
+
+```javascript
+const funcName = ({ props }) => {
+  return "Hello world";
+};
+```
+
+```html
+<div></div>
+```
+
+```css
+.class{
+  opacity:0;
+}
+```
+
+```bash
+cd dir
+```
+
+```python
+def funcName:
+  hello();
+```
+
+```typescript
+$("#navigation")
+  .css("background", "red")
+  .height(300)
+  .fadeIn(200);
+
+```
+
+```json
+{
+  "hello": "world"
 }
 ```

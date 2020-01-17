@@ -23,8 +23,7 @@ const BlogPage = () => {
   `);
   return (
     <div>
-      <Layout title="Posts">
-        <h1>Blog</h1>
+      <Layout title="Blog">
         <ol>
           {data.allMarkdownRemark.edges.map(edge => {
             return (

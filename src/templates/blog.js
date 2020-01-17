@@ -16,6 +16,7 @@ export const query = graphql`
 `;
 
 const Blog = ({ data }) => {
+  console.log(data);
   return (
     <Layout title={data.markdownRemark.frontmatter.title}>
       <h1>{data.markdownRemark.frontmatter.title}</h1>
