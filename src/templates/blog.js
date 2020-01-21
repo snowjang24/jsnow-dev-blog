@@ -11,17 +11,22 @@ export const query = graphql`
         date(formatString: "MMMM Do, YYYY")
       }
       html
+      tableOfContents(absolute: false, maxDepth: 4)
     }
   }
 `;
 
 const Blog = ({ data }) => {
-  console.log(data);
+  const frontmatter = data.markdownRemark.frontmatter;
+  const html = data.markdownRemark.html;
+  const tableOfContents = data.markdownRemark.tableOfContents;
+  console.log(tableOfContents);
   return (
-    <Layout title={data.markdownRemark.frontmatter.title}>
-      <h1>{data.markdownRemark.frontmatter.title}</h1>
-      <p>{data.markdownRemark.frontmatter.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
+    <Layout title={frontmatter.title}>
+      <h1>{frontmatter.title}</h1>
+      <p>{frontmatter.date}</p>
+      <div dangerouslySetInnerHTML={{ __html: tableOfContents }}></div>
+      <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </Layout>
   );
 };

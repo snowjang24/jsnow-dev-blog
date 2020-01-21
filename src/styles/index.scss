@@ -631,38 +631,34 @@ pre tt:after {
 .gatsby-highlight {
   position: relative;
   -webkit-overflow-scrolling: touch;
-  font-size: 0.875rem;
   pre[class*="language-"] {
     background: #29292e;
     &::before {
-      background: black;
-      border-radius: 0 0 0.25rem 0.25rem;
-      color: white;
-      font-size: 0.688rem;
+      font-size: 0.6rem;
       font-weight: bold;
       font-family: inherit;
       letter-spacing: 0.025rem;
-      padding: 0.1rem 0.5rem;
-      position: absolute;
-      right: 1rem;
       text-align: center;
       text-transform: uppercase;
       text-shadow: none;
+      color: white;
+      padding: 0.1rem 0.5rem;
+      background: black;
+      border-radius: 0 0.25rem 0 0.25rem;
+      position: absolute;
+      right: 0;
       top: 0;
     }
   }
-  code {
-    font-weight: 400;
-    white-space: pre-wrap;
-    font-family: "D2Coding", "Andale Mono", "Ubuntu Mono", monospace;
-  }
 }
 
-.gatsby-highlight pre[class="language-javascript"]::before {
-  content: "js";
-  background: #f7df1e;
-  color: #000;
+code[class*="language-"] {
+  font-family: "D2Coding", "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 0.875rem;
+  font-weight: 400;
+  white-space: pre-wrap;
 }
+
 .gatsby-highlight pre[class="language-jsx"]::before {
   content: "jsx";
   background: #2a2c2e;
@@ -690,14 +686,8 @@ pre tt:after {
   color: #ffdb49;
 }
 
-.gatsby-highlight pre[class="language-python"]::before {
-  content: "python";
-  background: #3576aa;
-  color: #ffdb49;
-}
-
 .gatsby-highlight pre[class="language-typescript"]::before {
-  content: "typescript";
+  content: "ts";
   background: #0075c1;
   color: #fff;
 }
@@ -706,4 +696,61 @@ pre tt:after {
   content: "json";
   background: #353535;
   color: #fff;
+}
+
+.gatsby-highlight pre[class="language-graphql"]::before {
+  content: "graphql";
+  background: #e10098;
+  color: #fff;
+}
+
+:not(pre) > code[class*="language-"] {
+  border-radius: 0.25rem;
+  padding: 0.15rem 0.25rem;
+  color: #ff4500;
+  background: #ffe1b8;
+  text-shadow: none;
+  &::after {
+    content: "";
+  }
+}
+
+#___gatsby {
+  display: flex;
+  justify-content: center;
+}
+
+#gatsby-focus-wrapper {
+  max-width: 680px;
+  min-width: 0;
+  width: 100%;
+}
+
+@media (min-width: 1080px) {
+  #gatsby-focus-wrapper {
+    margin: 0 64px;
+  }
+}
+
+@media (max-width: 1079.98px) and (min-width: 904px) {
+  #gatsby-focus-wrapper {
+    margin: 0 64px;
+  }
+}
+@media (max-width: 903.98px) and (min-width: 728px) {
+  #gatsby-focus-wrapper {
+    margin: 0 48px;
+  }
+}
+
+@media (max-width: 727.98px) and (min-width: 552px) {
+  #gatsby-focus-wrapper {
+    margin: 0 24px;
+  }
+}
+
+@media (max-width: 551.98px) {
+  #gatsby-focus-wrapper {
+    margin: 0 24px;
+  }
 }
