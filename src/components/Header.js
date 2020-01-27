@@ -1,7 +1,12 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
+import classNames from "classnames";
 
-const Header = () => {
+import "./header.scss";
+
+import jsnow_logo from "../../static/jsnow_logo.svg";
+
+const Header = ({ className }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -13,19 +18,18 @@ const Header = () => {
   `);
 
   return (
-    <header>
-      <h1>
-        <Link to="/">{data.site.siteMetadata.title}</Link>
-      </h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
+    <header className={classNames(className, "header")}>
+      <nav className="header__container _responsive">
+        <div className="header__logo">
+          <Link to="/">
+            <img src={jsnow_logo} />
+          </Link>
+        </div>
+        <ul className="header__menu menu">
+          <li className="menu__btn">
             <Link to="/blog">Blog</Link>
           </li>
-          <li>
+          <li className="menu__btn">
             <Link to="/about">About</Link>
           </li>
         </ul>

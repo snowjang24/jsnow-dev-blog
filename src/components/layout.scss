@@ -1,0 +1,24 @@
+.main {
+  width: 100%;
+  &__content {
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.content {
+  display: flex;
+  justify-content: center;
+  &__main {
+    max-width: 680px;
+    min-width: 0;
+    width: 100%;
+  }
+}
+.main-header {
+  max-width: 1192px;
+  min-width: 0;
+  width: 100%;
+}
