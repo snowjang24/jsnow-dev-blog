@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
+import Toc from "../components/Toc";
 
 export const query = graphql`
   query($slug: String!) {
@@ -20,12 +21,12 @@ const Blog = ({ data }) => {
   const frontmatter = data.markdownRemark.frontmatter;
   const html = data.markdownRemark.html;
   const tableOfContents = data.markdownRemark.tableOfContents;
-  console.log(tableOfContents);
+
   return (
     <Layout title={frontmatter.title}>
       <h1>{frontmatter.title}</h1>
       <p>{frontmatter.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: tableOfContents }}></div>
+      <Toc tableOfContents={tableOfContents} />
       <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </Layout>
   );

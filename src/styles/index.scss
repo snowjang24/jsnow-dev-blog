@@ -628,6 +628,14 @@ pre tt:after {
   }
 }
 
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 .gatsby-highlight {
   position: relative;
   -webkit-overflow-scrolling: touch;
@@ -663,6 +671,12 @@ code[class*="language-"] {
   content: "jsx";
   background: #2a2c2e;
   color: #54c1de;
+}
+
+.gatsby-highlight pre[class="language-javascript"]::before {
+  content: "js";
+  background: #f0db4f;
+  color: #323330;
 }
 .gatsby-highlight pre[class="language-html"]::before {
   content: "html";
@@ -703,6 +717,11 @@ code[class*="language-"] {
   background: #e10098;
   color: #fff;
 }
+.gatsby-highlight pre[class="language-text"]::before {
+  content: "text";
+  background: #fff;
+  color: #353535;
+}
 
 :not(pre) > code[class*="language-"] {
   border-radius: 0.25rem;
@@ -715,42 +734,31 @@ code[class*="language-"] {
   }
 }
 
-#___gatsby {
-  display: flex;
-  justify-content: center;
-}
-
-#gatsby-focus-wrapper {
-  max-width: 680px;
-  min-width: 0;
-  width: 100%;
-}
-
 @media (min-width: 1080px) {
-  #gatsby-focus-wrapper {
+  ._responsive {
     margin: 0 64px;
   }
 }
 
 @media (max-width: 1079.98px) and (min-width: 904px) {
-  #gatsby-focus-wrapper {
+  ._responsive {
     margin: 0 64px;
   }
 }
 @media (max-width: 903.98px) and (min-width: 728px) {
-  #gatsby-focus-wrapper {
+  ._responsive {
     margin: 0 48px;
   }
 }
 
 @media (max-width: 727.98px) and (min-width: 552px) {
-  #gatsby-focus-wrapper {
+  ._responsive {
     margin: 0 24px;
   }
 }
 
 @media (max-width: 551.98px) {
-  #gatsby-focus-wrapper {
+  ._responsive {
     margin: 0 24px;
   }
 }
