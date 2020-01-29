@@ -23,7 +23,6 @@ body {
   font-family: "Ridi Batang", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #eee;
 }
 article,
 aside,
@@ -57,8 +56,13 @@ template {
   display: none;
 }
 a {
+  color: inherit;
   background-color: transparent;
+  text-decoration: none;
   -webkit-text-decoration-skip: objects;
+}
+a:visited {
+  color: inherit;
 }
 a:active,
 a:hover {
@@ -508,7 +512,13 @@ b {
   font-weight: bold;
 }
 strong {
-  font-weight: bold;
+  font-weight: normal;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(255, 177, 45, 0.3) 30%,
+    rgba(255, 177, 45, 0.3) 100%
+  );
 }
 dt {
   font-weight: bold;
@@ -517,7 +527,7 @@ th {
   font-weight: bold;
 }
 li {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: calc(1.45rem / 3);
 }
 ol li {
   padding-left: 0;
@@ -527,13 +537,13 @@ ul li {
 }
 li > ol {
   margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
+  margin-bottom: calc(1.45rem / 3);
+  margin-top: calc(1.45rem / 3);
 }
 li > ul {
   margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
+  margin-bottom: calc(1.45rem / 3);
+  margin-top: calc(1.45rem / 3);
 }
 blockquote *:last-child {
   margin-bottom: 0;
@@ -545,7 +555,7 @@ p *:last-child {
   margin-bottom: 0;
 }
 li > p {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: calc(1.45rem / 3);
 }
 code {
   font-size: 0.85rem;
@@ -627,18 +637,14 @@ pre tt:after {
     font-size: 100%;
   }
 }
+.gatsby-resp-image-wrapper {
+  margin-bottom: 1.45rem;
+}
 
-ol,
-ul,
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
 .gatsby-highlight {
   position: relative;
   -webkit-overflow-scrolling: touch;
+  margin-bottom: 1.45rem;
   pre[class*="language-"] {
     background: #29292e;
     &::before {
@@ -727,9 +733,12 @@ code[class*="language-"] {
   border-radius: 0.25rem;
   padding: 0.15rem 0.25rem;
   color: #ff4500;
-  background: #ffe1b8;
+  background: #ffefd9;
   text-shadow: none;
   &::after {
+    content: "";
+  }
+  &::before {
     content: "";
   }
 }
