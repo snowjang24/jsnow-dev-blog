@@ -24,10 +24,12 @@ const Blog = ({ data }) => {
 
   return (
     <Layout title={frontmatter.title}>
-      <h1>{frontmatter.title}</h1>
-      <p>{frontmatter.date}</p>
-      <Toc tableOfContents={tableOfContents} />
-      <div dangerouslySetInnerHTML={{ __html: html }}></div>
+      <header>
+        <h1>{frontmatter.title}</h1>
+        <p>{frontmatter.date}</p>
+      </header>
+      <Toc className="main__toc" tableOfContents={tableOfContents} />
+      <section dangerouslySetInnerHTML={{ __html: html }}></section>
     </Layout>
   );
 };
