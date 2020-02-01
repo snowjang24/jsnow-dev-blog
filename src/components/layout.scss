@@ -1,24 +1,19 @@
 .main {
   width: 100%;
-  &__content {
-  }
-  &__header {
+  display: flex;
+  flex-direction: column;
+  &__navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-}
-.content {
-  display: flex;
-  justify-content: center;
-  &__main {
-    max-width: 680px;
-    min-width: 0;
+    position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
   }
-}
-.main-header {
-  max-width: 1192px;
-  min-width: 0;
-  width: 100%;
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
 }

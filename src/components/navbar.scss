@@ -1,8 +1,11 @@
-.header {
-  background-color: #ffb02c;
+.navbar {
   height: 58px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(2px);
   &__container {
     width: 100%;
+    max-width: 1192px;
+    min-width: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,8 +14,6 @@
     width: 40px;
     height: 40px;
   }
-  &__menu {
-  }
 }
 
 .menu {
@@ -20,14 +21,19 @@
   margin: 0;
   &__btn {
     margin: 0;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
     > a {
       display: flex;
       align-items: center;
       height: 58px;
       padding: 0 8px;
       color: #292929;
+      transition: all 0.2s;
       &:hover {
-        color: #fff;
+        color: #fca81e;
       }
     }
   }

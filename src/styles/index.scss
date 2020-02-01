@@ -6,7 +6,6 @@
   font-style: normal;
   font-weight: normal;
 }
-
 @font-face {
   font-family: "D2Coding";
   src: url("../../static/fonts/D2Coding.ttf") format("truetype");
@@ -446,13 +445,10 @@ fieldset {
   margin-bottom: 1.45rem;
 }
 blockquote {
-  margin-left: 1.45rem;
-  margin-right: 1.45rem;
+  margin-left: 0;
+  margin-right: 0;
   margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+  padding: 0.8rem 1rem;
   margin-bottom: 1.45rem;
 }
 form {
@@ -516,8 +512,8 @@ strong {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 1) 30%,
-    rgba(255, 177, 45, 0.3) 30%,
-    rgba(255, 177, 45, 0.3) 100%
+    rgba(255, 177, 45, 0.35) 30%,
+    rgba(255, 177, 45, 0.35) 100%
   );
 }
 dt {
@@ -647,6 +643,7 @@ pre tt:after {
   margin-bottom: 1.45rem;
   pre[class*="language-"] {
     background: #29292e;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     &::before {
       font-size: 0.6rem;
       font-weight: bold;
@@ -738,9 +735,14 @@ code[class*="language-"] {
   &::after {
     content: "";
   }
-  &::before {
-    content: "";
-  }
+}
+blockquote {
+  font-size: 0.9rem;
+  color: #383838;
+  border-left: 12px solid #ffce7e;
+  background: #fff9ef;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 1080px) {
@@ -753,10 +755,17 @@ code[class*="language-"] {
   ._responsive {
     margin: 0 64px;
   }
+  .main__toc {
+    display: none;
+  }
 }
+
 @media (max-width: 903.98px) and (min-width: 728px) {
   ._responsive {
     margin: 0 48px;
+  }
+  .main__toc {
+    display: none;
   }
 }
 
@@ -764,10 +773,16 @@ code[class*="language-"] {
   ._responsive {
     margin: 0 24px;
   }
+  .main__toc {
+    display: none;
+  }
 }
 
 @media (max-width: 551.98px) {
   ._responsive {
     margin: 0 24px;
+  }
+  .main__toc {
+    display: none;
   }
 }

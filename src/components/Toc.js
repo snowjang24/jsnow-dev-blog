@@ -4,7 +4,7 @@ import classNames from "classnames";
 const Toc = ({ className, tableOfContents }) => {
   return (
     <aside
-      className={classNames(className, "toc")}
+      className={classNames(className, "post-toc")}
       dangerouslySetInnerHTML={{ __html: tableOfContents }}
     ></aside>
   );
