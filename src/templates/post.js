@@ -1,5 +1,6 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React, { useState, useRef, useEffect } from "react";
+import { graphql, Link } from "gatsby";
+import classNames from "classnames";
 
 import Layout from "../components/Layout";
 import Toc from "../components/Toc";
@@ -21,28 +22,53 @@ export const query = graphql`
 `;
 
 const Post = ({ data }) => {
+  const [goingUp, setGoingUp] = useState(false);
+  const prevScrollY = useRef(0);
+
   const frontmatter = data.markdownRemark.frontmatter;
   const html = data.markdownRemark.html;
   const tableOfContents = data.markdownRemark.tableOfContents;
-  const goToBack = e => {
-    console.log(e);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (prevScrollY.current < currentScrollY && goingUp) {
+        setGoingUp(false);
+      }
+      if (prevScrollY.current > currentScrollY && !goingUp) {
+        setGoingUp(true);
+      }
+
+      prevScrollY.current = currentScrollY;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [goingUp]);
 
   return (
-    <Layout title={frontmatter.title}>
+    <Layout title={frontmatter.title} scrollDirection={goingUp}>
       <div className="content">
-        <header className="content__post-title post-title">
+        <header
+          className={classNames("content__post-title", "post-title", {
+            _active: !goingUp
+          })}
+        >
           <div className="post-title__inner _responsive">
-            <div className="post-title__back-btn back-btn" onClick={goToBack}>
-              <img src={back_btn} />
-            </div>
+            <Link to="/posts/">
+              <div className="post-title__back-btn back-btn">
+                <img src={back_btn} />
+              </div>
+            </Link>
             <div className="post-title__title-box title-box">
               <div className="title-box__title">{frontmatter.title}</div>
               <div className="title-box__date">{frontmatter.date}</div>
             </div>
+            <Toc
+              className="post-title__post-toc"
+              tableOfContents={tableOfContents}
+            />
           </div>
         </header>
-        <Toc className="content__post-toc" tableOfContents={tableOfContents} />
+
         <section
           className="content__post-body post-body _responsive"
           dangerouslySetInnerHTML={{ __html: html }}

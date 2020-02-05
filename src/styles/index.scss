@@ -507,15 +507,7 @@ address {
 b {
   font-weight: bold;
 }
-strong {
-  font-weight: normal;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 30%,
-    rgba(255, 177, 45, 0.35) 30%,
-    rgba(255, 177, 45, 0.35) 100%
-  );
-}
+
 dt {
   font-weight: bold;
 }
@@ -744,6 +736,9 @@ blockquote {
   border-radius: 8px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
+._active {
+  transform: translateY(-100%);
+}
 
 @media (min-width: 1080px) {
   ._responsive {
@@ -755,7 +750,7 @@ blockquote {
   ._responsive {
     margin: 0 64px;
   }
-  .main__toc {
+  .post-title__post-toc {
     display: none;
   }
 }
@@ -764,7 +759,7 @@ blockquote {
   ._responsive {
     margin: 0 48px;
   }
-  .main__toc {
+  .post-title__post-toc {
     display: none;
   }
 }
@@ -773,7 +768,7 @@ blockquote {
   ._responsive {
     margin: 0 24px;
   }
-  .main__toc {
+  .post-title__post-toc {
     display: none;
   }
 }
@@ -782,7 +777,7 @@ blockquote {
   ._responsive {
     margin: 0 24px;
   }
-  .main__toc {
+  .post-title__post-toc {
     display: none;
   }
 }
