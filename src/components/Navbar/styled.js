@@ -1,8 +1,10 @@
-.navbar {
+import styled from "styled-components";
+
+export const Navbar = styled.header`
   height: 58px;
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(2px);
-  &__container {
+  .navbar {
     width: 100%;
     max-width: 1192px;
     min-width: 0;
@@ -10,20 +12,20 @@
     justify-content: space-between;
     align-items: center;
   }
-  &__logo {
+  .logo-container {
     width: 40px;
     height: 40px;
   }
-}
+`;
 
-.menu {
+export const Menu = styled.ul`
   display: flex;
   margin: 0;
-  &__btn {
+  .btn-container {
     margin: 0;
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-weight: 100;
     text-transform: uppercase;
     > a {
       display: flex;
@@ -37,4 +39,4 @@
       }
     }
   }
-}
+`;

@@ -1,8 +1,10 @@
-.main {
+import styled from "styled-components";
+
+export const Layout = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  &__navbar {
+  .header-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,8 +16,7 @@
     transition: transform 0.3s ease;
     will-change: transform;
   }
-  &__container {
-    display: flex;
-    justify-content: center;
+  .content-container {
+    margin-top: 56px;
   }
-}
+`;

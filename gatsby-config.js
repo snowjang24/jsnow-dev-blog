@@ -19,11 +19,16 @@ module.exports = {
       options: {
         pedantic: false,
         plugins: [
-          `gatsby-remark-autolink-headers`,
+          {
+            resolve: "gatsby-remark-autolink-headers",
+            options: {
+              icon: false
+            }
+          },
           "gatsby-remark-relative-images",
           {
             resolve: "gatsby-remark-images",
-            opsions: {
+            options: {
               maxWidth: 750,
               linkImagesToOriginal: false
             }

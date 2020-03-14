@@ -15,7 +15,7 @@ tags: ["css방법론", "bem"]
 2017년에는 추천하는 기술에 포함되지 않았던 BEM은 2018년에 들어 추천하는 기술에 올랐고, 2019년에는 여전히 추천하는 기술에 포함돼있지만 [CSS in JS](https://medium.com/@okys2010/모던-css-1-css-in-js-c1c53d9bbbc9)의 등장으로 금방 자리를 내어줄 것 같다.
 
 > CSS in JS는 React같은 Front-End Framework에 최적화되어 있다.
-> 프레임워크의 사용이 주를 이루는 요즘, 금방 BEM이 대체되지 않을까라는 생각이 들었다.
+> 프레임워크의 사용이 주를 이루는 요즘, BEM이 중요하지 않아질 수 있겠지만, 배워두는 것이 좋을 것 같다.
 > CSS의 변천사에 관해서는 [이 글](https://medium.com/@perezpriego7/css-evolution-from-css-sass-bem-css-modules-to-styled-components-d4c1da3a659b)을 한번 읽어보면 좋을 것 같다.
 
 하지만 위의 사진에도 적혀 있듯이 이런 방법론이 있다는 것에 의미를 두고 간단히 정리해보려 한다.
@@ -279,19 +279,17 @@ Modifier를 통해 앞의 블럭과 요소가 묘사하지 않았던 모양, 상
 
 <!-- 수식어 이름은 같지만 다른 값을 가진 클래스 명을 같이 써서는 안 된다 -->
 <form
-  class="search-form
-             search-form_theme_islands
-             search-form_theme_lite"
+  class="search-form 
+         search-form_theme_islands search-form_theme_lite"
 >
   <input class="search-form__input" />
   <button
-    class="search-form__button
-                 search-form__button_size_s
-                 search-form__button_size_m"
+    class="search-form__button search-form__button_size_s search-form__button_size_m"
   >
     Search
   </button>
 </form>
+
 ```
 
 <br>
