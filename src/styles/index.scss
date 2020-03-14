@@ -1,5 +1,4 @@
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
-
 @font-face {
   font-family: "Ridi Batang";
   src: url("../../static/fonts/RIDIBatang.otf") format("opentype");
@@ -7,10 +6,8 @@
   font-weight: normal;
 }
 @font-face {
-  font-family: "D2Coding";
-  src: url("../../static/fonts/D2Coding.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
+  font-family: "Noto Sans KR", sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700&display=swap&subset=korean");
 }
 
 html {
@@ -19,7 +16,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: "Ridi Batang", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -79,10 +76,6 @@ strong {
 }
 dfn {
   font-style: italic;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 mark {
   background-color: #ff0;
@@ -250,7 +243,7 @@ h1 {
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 2.35rem;
   line-height: 1.1;
 }
 h2 {
@@ -264,9 +257,9 @@ h2 {
   margin-bottom: 1.45rem;
   color: inherit;
 
-  font-weight: bold;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 1.85rem;
   line-height: 1.1;
 }
 h3 {
@@ -279,10 +272,9 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-
-  font-weight: bold;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  font-size: 1.4rem;
   line-height: 1.1;
 }
 h4 {
@@ -396,6 +388,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  line-height: 1.7;
 }
 figure {
   margin-left: 0;
@@ -413,9 +406,8 @@ pre {
   margin-top: 0;
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
-  line-height: 1.42;
+  line-height: 1.6;
   background: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
   overflow: auto;
   word-wrap: normal;
   padding: 1.45rem;
@@ -507,15 +499,7 @@ address {
 b {
   font-weight: bold;
 }
-strong {
-  font-weight: normal;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 1) 30%,
-    rgba(255, 177, 45, 0.35) 30%,
-    rgba(255, 177, 45, 0.35) 100%
-  );
-}
+
 dt {
   font-weight: bold;
 }
@@ -605,8 +589,6 @@ td:last-child {
 tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -628,11 +610,13 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
   }
 }
+
 .gatsby-resp-image-wrapper {
   margin-bottom: 1.45rem;
 }
@@ -642,8 +626,7 @@ pre tt:after {
   -webkit-overflow-scrolling: touch;
   margin-bottom: 1.45rem;
   pre[class*="language-"] {
-    background: #29292e;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
     &::before {
       font-size: 0.6rem;
       font-weight: bold;
@@ -655,7 +638,6 @@ pre tt:after {
       color: white;
       padding: 0.1rem 0.5rem;
       background: black;
-      border-radius: 0 0.25rem 0 0.25rem;
       position: absolute;
       right: 0;
       top: 0;
@@ -664,10 +646,9 @@ pre tt:after {
 }
 
 code[class*="language-"] {
-  font-family: "D2Coding", "Andale Mono", "Ubuntu Mono", monospace;
-  font-size: 0.875rem;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 0.8rem;
   font-weight: 400;
-  white-space: pre-wrap;
 }
 
 .gatsby-highlight pre[class="language-jsx"]::before {
@@ -729,20 +710,16 @@ code[class*="language-"] {
 :not(pre) > code[class*="language-"] {
   border-radius: 0.25rem;
   padding: 0.15rem 0.25rem;
-  color: #ff4500;
-  background: #ffefd9;
+  color: #f34b6d;
+  background: #f8f8f8;
   text-shadow: none;
   &::after {
     content: "";
   }
 }
-blockquote {
-  font-size: 0.9rem;
-  color: #383838;
-  border-left: 12px solid #ffce7e;
-  background: #fff9ef;
-  border-radius: 8px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+
+.activeNavbar {
+  transform: translateY(-100%);
 }
 
 @media (min-width: 1080px) {
@@ -750,13 +727,15 @@ blockquote {
     margin: 0 64px;
   }
 }
+@media (max-width: 1256px) {
+  .toc {
+    display: none;
+  }
+}
 
 @media (max-width: 1079.98px) and (min-width: 904px) {
   ._responsive {
     margin: 0 64px;
-  }
-  .main__toc {
-    display: none;
   }
 }
 
@@ -764,25 +743,16 @@ blockquote {
   ._responsive {
     margin: 0 48px;
   }
-  .main__toc {
-    display: none;
-  }
 }
 
 @media (max-width: 727.98px) and (min-width: 552px) {
   ._responsive {
     margin: 0 24px;
   }
-  .main__toc {
-    display: none;
-  }
 }
 
 @media (max-width: 551.98px) {
   ._responsive {
     margin: 0 24px;
-  }
-  .main__toc {
-    display: none;
   }
 }
