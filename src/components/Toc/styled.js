@@ -7,7 +7,6 @@ export const Toc = styled.div`
     margin-left: 0.8rem;
   }
   > ul {
-    border-left: 1px solid #dadde1;
     margin-left: 0;
     padding-left: 1rem;
   }
@@ -18,7 +17,14 @@ export const Toc = styled.div`
     margin-top: 0;
     list-style: none;
   }
-  a:hover {
-    color: #fca81e;
+  a {
+    transition: font-size 0.2s ease;
+    will-change: font-size;
+    &:hover {
+      color: #2b92fd;
+    }
+    &:active {
+      font-size: 0.75rem;
+    }
   }
 `;
