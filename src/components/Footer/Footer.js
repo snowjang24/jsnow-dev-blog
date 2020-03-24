@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import * as Styled from "./styled";
 
 export default ({ className }) => {
   const data = useStaticQuery(graphql`
@@ -12,8 +13,8 @@ export default ({ className }) => {
     }
   `);
   return (
-    <footer className={className}>
+    <Styled.Footer className={className}>
       <p>Created by {data.site.siteMetadata.author}, © 2019</p>
-    </footer>
+    </Styled.Footer>
   );
 };

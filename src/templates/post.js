@@ -35,7 +35,7 @@ export default ({ data }) => {
         </header>
         <section className="post-body-container">
           <Styled.PostBody
-            className="post-body _responsive"
+            className="post-body"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </section>

@@ -718,18 +718,16 @@ code[class*="language-"] {
   }
 }
 
-.activeNavbar {
+.goingUpNav {
   transform: translateY(-100%);
+}
+.activeNav {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 1080px) {
   ._responsive {
     margin: 0 64px;
-  }
-}
-@media (max-width: 1256px) {
-  .toc {
-    display: none;
   }
 }
 

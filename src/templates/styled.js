@@ -14,7 +14,7 @@ export const Content = styled.div`
     box-sizing: border-box;
     max-width: 240x;
     left: calc(50% + 388px);
-    top: 64px;
+    top: 128px;
   }
 `;
 
