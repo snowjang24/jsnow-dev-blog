@@ -6,13 +6,11 @@ import { Head, Navbar, Footer } from "../../components";
 
 export default ({ children, title }) => {
   const [goingUp, setGoingUp] = useState(true);
-  const [scrollY, setScrollY] = useState(0);
   const prevScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setScrollY(currentScrollY);
       if (prevScrollY.current < currentScrollY && goingUp) {
         setGoingUp(false);
       }
@@ -30,14 +28,13 @@ export default ({ children, title }) => {
       <Head title={title} />
       <Navbar
         className={classNames("header-container", {
-          goingUpNav: scrollY > 0 && !goingUp,
-          activeNav: scrollY > 0
+          activeNavbar: !goingUp
         })}
       />
+
       <div className="content-container">{children}</div>
-      <div className="footer-container">
-        <Footer className="footer _responsive" />
-      </div>
+
+      <Footer className="footer-container" />
     </Styled.Layout>
   );
 };

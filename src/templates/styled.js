@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  min-width: 0;
-  max-width: 680px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   .post-body-container,
   .post-title-container {
+    display: flex;
+    justify-content: center;
     margin-bottom: 2rem;
   }
   .post-toc-container {
@@ -15,13 +14,15 @@ export const Content = styled.div`
     box-sizing: border-box;
     max-width: 240x;
     left: calc(50% + 388px);
-    top: 128px;
+    top: 64px;
   }
 `;
 
 export const PostTitle = styled.div`
   margin-top: 64px;
   width: 100%;
+  max-width: 680px;
+  min-width: 0;
   height: 240px;
   border-bottom: 1px solid #e8edf1;
   .title {
@@ -35,6 +36,8 @@ export const PostTitle = styled.div`
 `;
 
 export const PostBody = styled.div`
+  max-width: 680px;
+  min-width: 0;
   font-family: "Ridi Batang", sans-serif;
   a {
     color: #2b92fd;
