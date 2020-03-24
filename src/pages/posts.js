@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 
 import { Layout } from "../structures";
 import { PostItem } from "../components";
+import * as Styled from "./posts.style";
 
 const PostsPage = () => {
   const data = useStaticQuery(graphql`
@@ -25,15 +26,18 @@ const PostsPage = () => {
   return (
     <div>
       <Layout title="Posts">
-        <ol>
-          {data.allMarkdownRemark.edges.map(edge => (
-            <PostItem
-              url={edge.node.fields.slug}
-              title={edge.node.frontmatter.title}
-              date={edge.node.frontmatter.date}
-            />
-          ))}
-        </ol>
+        <Styled.Posts className="posts-list _responsive">
+          <h2>Posts List</h2>
+          <ul>
+            {data.allMarkdownRemark.edges.map(edge => (
+              <PostItem
+                url={edge.node.fields.slug}
+                title={edge.node.frontmatter.title}
+                date={edge.node.frontmatter.date}
+              />
+            ))}
+          </ul>
+        </Styled.Posts>
       </Layout>
     </div>
   );

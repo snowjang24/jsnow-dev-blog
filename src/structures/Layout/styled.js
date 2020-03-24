@@ -8,7 +8,6 @@ export const Layout = styled.div`
   .header-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     position: fixed;
     width: 100%;
     top: 0;
@@ -18,11 +17,15 @@ export const Layout = styled.div`
     will-change: transform;
   }
   .content-container {
-    margin-top: 56px;
     flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 56px;
   }
   .footer-container {
-    background-color: #e8edf1;
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
   }
   @media (max-width: 1256px) {
     .toc {

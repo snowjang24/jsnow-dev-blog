@@ -34,7 +34,7 @@ export default ({ children, title }) => {
           activeNav: scrollY > 0
         })}
       />
-      <div className="content-container _responsive">{children}</div>
+      <div className="content-container">{children}</div>
       <div className="footer-container">
         <Footer className="footer _responsive" />
       </div>
