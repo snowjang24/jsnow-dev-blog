@@ -35,7 +35,7 @@ export const Menu = styled.ul`
       color: #292929;
       transition: all 0.2s;
       &:hover {
-        color: #2b92fd;
+        color: #fca81e;
       }
     }
   }

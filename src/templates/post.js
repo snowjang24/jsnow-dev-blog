@@ -26,7 +26,7 @@ export default ({ data }) => {
 
   return (
     <Layout title={frontmatter.title}>
-      <Styled.Content className="content _responsive">
+      <Styled.Content className="content">
         <header className="post-title-container">
           <Styled.PostTitle className="post-title">
             <div className="title">{frontmatter.title}</div>
@@ -35,7 +35,7 @@ export default ({ data }) => {
         </header>
         <section className="post-body-container">
           <Styled.PostBody
-            className="post-body"
+            className="post-body _responsive"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </section>
