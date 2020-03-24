@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 
 import { Layout } from "../structures";
 import { PostItem } from "../components";
-import * as Styled from "./posts.style";
+import * as Styled from "./postsStyled";
 
 const PostsPage = () => {
   const data = useStaticQuery(graphql`
