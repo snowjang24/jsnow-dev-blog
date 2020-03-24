@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import styled from "styled-components";
 
 import { Layout } from "../structures";
 import { PostItem } from "../components";
-import * as Styled from "./postsStyled";
 
 const PostsPage = () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +26,7 @@ const PostsPage = () => {
   return (
     <div>
       <Layout title="Posts">
-        <Styled.Posts className="posts-list _responsive">
+        <Posts className="posts-list _responsive">
           <h2>Posts List</h2>
           <ul>
             {data.allMarkdownRemark.edges.map(edge => (
@@ -37,10 +37,18 @@ const PostsPage = () => {
               />
             ))}
           </ul>
-        </Styled.Posts>
+        </Posts>
       </Layout>
     </div>
   );
 };
+
+const Posts = styled.div`
+  max-width: 680px;
+  min-width: 0;
+  width: 100%;
+
+  margin-top: 36px;
+`;
 
 export default PostsPage;
