@@ -14,6 +14,7 @@ module.exports = {
         generateMatchPathRewrites: true // boolean to turn off automatic creation of redirect rules for client only paths
       }
     },
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
