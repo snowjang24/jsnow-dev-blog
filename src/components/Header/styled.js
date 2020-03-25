@@ -1,24 +1,22 @@
 import styled from "styled-components";
 
-export const Navbar = styled.header`
+export const Header = styled.header`
   height: 58px;
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(2px);
-  .navbar {
-    width: 100%;
-    max-width: 1192px;
-    min-width: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  width: 100%;
+  max-width: 1192px;
+  min-width: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   .logo-container {
     width: 40px;
     height: 40px;
   }
 `;
 
-export const Menu = styled.ul`
+export const Navbar = styled.ul`
   display: flex;
   margin: 0;
   .btn-container {

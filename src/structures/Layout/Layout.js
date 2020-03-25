@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import classNames from "classnames";
 
 import * as Styled from "./styled";
-import { Head, Navbar, Footer } from "../../components";
+import { Head, Header, Footer } from "../../components";
 
 export default ({ children, title }) => {
   const [goingUp, setGoingUp] = useState(true);
@@ -28,12 +28,14 @@ export default ({ children, title }) => {
   return (
     <Styled.Layout className="main">
       <Head title={title} />
-      <Navbar
+      <div
         className={classNames("header-container", {
           goingUpNav: scrollY > 0 && !goingUp,
           activeNav: scrollY > 0
         })}
-      />
+      >
+        <Header className="header _responsive" />
+      </div>
       <div className="content-container">{children}</div>
       <div className="footer-container">
         <Footer className="footer _responsive" />

@@ -39,3 +39,9 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
+
+// createPage({
+//   path: "/",
+//   component: path.resolve("./src/pages/posts.js"),
+//   context: {}
+// });
