@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Layout } from "../structures";
-import "../styles/index.scss";
 
 const IndexPage = () => {
   return (
