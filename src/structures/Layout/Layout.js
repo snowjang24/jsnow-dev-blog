@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import classNames from "classnames";
-import "../../styles/index.scss";
 
 import * as Styled from "./styled";
 import { Head, Header, Footer } from "../../components";
