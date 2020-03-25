@@ -13,7 +13,7 @@ const PostsPage = () => {
           node {
             frontmatter {
               title
-              date(formatString: "MMMM Do, YYYY")
+              date(formatString: "MM월 DD일, YYYY년")
             }
             fields {
               slug

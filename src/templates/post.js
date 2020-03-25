@@ -10,7 +10,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        date(formatString: "MMMM Do, YYYY")
+        date(formatString: "MM월 DD일, YYYY년")
       }
       html
       tableOfContents(absolute: false, maxDepth: 4)
@@ -30,7 +30,7 @@ export default ({ data }) => {
         <header className="post-title-container">
           <Styled.PostTitle className="post-title">
             <div className="title-container">
-              <div className="title">{frontmatter.title}</div>
+              <div className="title">{`📝 ${frontmatter.title}`}</div>
               <div className="date">{frontmatter.date}</div>
             </div>
           </Styled.PostTitle>

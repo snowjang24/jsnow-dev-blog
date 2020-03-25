@@ -5,8 +5,8 @@ import { FaFacebookSquare, FaGithubSquare, FaInstagram } from "react-icons/fa";
 
 export default ({ className }) => {
   const contactList = [
-    { url: "https://facebook.com/snowjang24", icon: FaFacebookSquare },
     { url: "https://github.com/snowjang24", icon: FaGithubSquare },
+    { url: "https://facebook.com/snowjang24", icon: FaFacebookSquare },
     { url: "https://instagram.com/snow_jang24", icon: FaInstagram }
   ];
   const data = useStaticQuery(graphql`
@@ -35,7 +35,7 @@ export default ({ className }) => {
         ))}
       </ul>
       <p className="copyright">
-        Created by {data.site.siteMetadata.author}, © 2019
+        Created by {data.site.siteMetadata.author}, © 2020
       </p>
     </Styled.Footer>
   );
