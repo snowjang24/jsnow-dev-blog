@@ -29,8 +29,10 @@ export default ({ data }) => {
       <Styled.Content className="content _responsive">
         <header className="post-title-container">
           <Styled.PostTitle className="post-title">
-            <div className="title">{frontmatter.title}</div>
-            <div className="date">{frontmatter.date}</div>
+            <div className="title-container">
+              <div className="title">{frontmatter.title}</div>
+              <div className="date">{frontmatter.date}</div>
+            </div>
           </Styled.PostTitle>
         </header>
         <section className="post-body-container">

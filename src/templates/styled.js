@@ -20,17 +20,22 @@ export const Content = styled.div`
 `;
 
 export const PostTitle = styled.div`
-  margin-top: 64px;
+  margin-top: 48px;
   width: 100%;
-  height: 240px;
-  border-bottom: 1px solid #e8edf1;
+  height: 120px;
+  .title-container {
+    padding: 16px 32px;
+    border: 1px solid #cfd6db;
+    border-radius: 16px;
+  }
   .title {
-    font-weight: bolder;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
   }
   .date {
     color: #99a9b5;
+    font-size: 0.85rem;
   }
 `;
 

@@ -27,8 +27,8 @@ const PostsPage = () => {
     <div>
       <Layout title="Posts">
         <Posts className="posts-list _responsive">
-          <h2>Posts List</h2>
-          <ul>
+          <h2 clasaName="list-title">🗂 Posts List</h2>
+          <ul className="posts">
             {data.allMarkdownRemark.edges.map(edge => (
               <PostItem
                 url={edge.node.fields.slug}
@@ -47,8 +47,14 @@ const Posts = styled.div`
   max-width: 680px;
   min-width: 0;
   width: 100%;
-
   margin-top: 36px;
+  .list-title {
+    font-size: 1.5rem;
+  }
+  .posts {
+    list-style: none;
+    margin-left: 0;
+  }
 `;
 
 export default PostsPage;

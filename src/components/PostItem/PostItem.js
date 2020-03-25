@@ -5,11 +5,11 @@ import { Link } from "gatsby";
 
 export default ({ url, title, date }) => {
   return (
-    <Styled.PostItem>
-      <Link to={`/posts/${url}`}>
-        <h2>{title}</h2>
-        <p>{date}</p>
-      </Link>
-    </Styled.PostItem>
+    <Link to={`/posts/${url}`}>
+      <Styled.PostItem>
+        <h2 className="title">{title}</h2>
+        <p className="date">{date}</p>
+      </Styled.PostItem>
+    </Link>
   );
 };
