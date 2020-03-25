@@ -17,6 +17,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^2.18.12",
+    "gatsby-plugin-netlify": "^2.2.1",
     "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-plugin-sass": "^2.1.26",
     "gatsby-plugin-sharp": "^2.3.10",
