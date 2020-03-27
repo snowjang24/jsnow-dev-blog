@@ -5,6 +5,10 @@ import * as Styled from "./styled";
 import jsnow_logo from "../../../static/jsnow_logo.svg";
 
 export default ({ className }) => {
+  const routes = [
+    { name: "POSTS", url: "/posts" }
+    // { name: "ABOUT", url: "/about" }
+  ];
   return (
     <Styled.Header className={className}>
       <div className="logo-container">
@@ -13,12 +17,11 @@ export default ({ className }) => {
         </Link>
       </div>
       <Styled.Navbar className="navbar">
-        <li className="btn-container">
-          <Link to="/posts">Posts</Link>
-        </li>
-        <li className="btn-container">
-          <Link to="/about">About</Link>
-        </li>
+        {routes.map(route => (
+          <li className="btn-container">
+            <Link to={route.url}>{route.name}</Link>
+          </li>
+        ))}
       </Styled.Navbar>
     </Styled.Header>
   );
