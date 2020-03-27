@@ -22,19 +22,24 @@ export const Navbar = styled.ul`
   .btn-container {
     margin: 0;
     list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.15rem;
     font-weight: 100;
     text-transform: uppercase;
+    border 1px solid #99a9b5;
+    border-radius: 32px;
+    color: #99a9b5;
+    transition: transform 0.2s ease;
+    &:hover{
+      color: #fff;
+      background-color: #99a9b5;
+      transform: scale(1.1);
+    }
     > a {
       display: flex;
       align-items: center;
-      height: 58px;
-      padding: 0 8px;
-      color: #292929;
-      transition: all 0.2s;
-      &:hover {
-        color: #2b92fd;
-      }
+      justify-content: center;
+      width: 32px;
+      height: 32px;
     }
   }
 `;
