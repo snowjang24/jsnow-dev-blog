@@ -41,7 +41,7 @@ export default ({ data }) => {
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </section>
-        <Utterences repo="https://github.com/snowjang24/jsnow-dev-blog" />
+        <Utterences repo="snowjang24/jsnow-dev-blog" />
         <aside className="post-toc-container">
           <Toc tableOfContents={tableOfContents} />
         </aside>
