@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "gatsby";
 import { MdFolder } from "react-icons/md";
+import { IoMdPricetags } from "react-icons/io";
 
 import * as Styled from "./styled";
 import jsnow_logo from "../../../static/jsnow_logo.svg";
 
 export default ({ className }) => {
-  const routes = [{ name: "posts", url: "/posts", icon: MdFolder }];
+  const routes = [
+    { name: "posts", url: "/posts", icon: MdFolder },
+    { name: "tags", url: "/tags", icon: IoMdPricetags }
+  ];
   return (
     <Styled.Header className={className}>
       <div className="logo-container">

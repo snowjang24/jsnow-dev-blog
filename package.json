@@ -29,6 +29,7 @@
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-source-filesystem": "^2.1.43",
     "gatsby-transformer-remark": "^2.6.48",
+    "lodash": "^4.17.15",
     "node-sass": "^4.13.0",
     "prismjs": "^1.18.0",
     "react": "^16.12.0",

@@ -14,6 +14,7 @@ const PostsPage = () => {
             frontmatter {
               title
               date(formatString: "MM월 DD일, YYYY년")
+              tags
             }
             fields {
               slug
@@ -24,22 +25,21 @@ const PostsPage = () => {
     }
   `);
   return (
-    <div>
-      <Layout title="Posts">
-        <Posts className="posts-list _responsive">
-          <h2 clasaName="list-title">🗂 Posts List</h2>
-          <ul className="posts">
-            {data.allMarkdownRemark.edges.map(edge => (
-              <PostItem
-                url={edge.node.fields.slug}
-                title={edge.node.frontmatter.title}
-                date={edge.node.frontmatter.date}
-              />
-            ))}
-          </ul>
-        </Posts>
-      </Layout>
-    </div>
+    <Layout title="Posts">
+      <Posts className="posts-list _responsive">
+        <h2 className="list-title">🗂 Posts List</h2>
+        <ul className="posts">
+          {data.allMarkdownRemark.edges.map(edge => (
+            <PostItem
+              url={edge.node.fields.slug}
+              title={edge.node.frontmatter.title}
+              date={edge.node.frontmatter.date}
+              tags={edge.node.frontmatter.tags}
+            />
+          ))}
+        </ul>
+      </Posts>
+    </Layout>
   );
 };
 

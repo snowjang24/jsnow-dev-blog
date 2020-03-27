@@ -1,6 +1,7 @@
 ---
 title: "Gatsby를 사용하는 방법"
 date: "2019-04-04"
+tags: ["css방법론", "bem", "gatsby"]
 ---
 
 ## 블로그 테스트

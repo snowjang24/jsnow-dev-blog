@@ -20,7 +20,7 @@ export const Navbar = styled.ul`
   display: flex;
   margin: 0;
   .btn-container {
-    margin: 0;
+    margin: 0 0 0 8px;
     list-style: none;
     font-size: 1.15rem;
     font-weight: 100;

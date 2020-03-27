@@ -15,7 +15,7 @@ export const Footer = styled.footer`
     list-style: none;
     margin: 0;
     display: grid;
-    grid-template: 48px / repeat(3, 48px);
+    grid-template: 48px / repeat(4, 48px);
     align-items: center;
   }
   .icon-container {
