@@ -1,6 +1,6 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
-import { Toc } from "../components";
+import { graphql } from "gatsby";
+import { Toc, Utterences } from "../components";
 import { Layout } from "../structures";
 
 import * as Styled from "./styled";
@@ -41,6 +41,7 @@ export default ({ data }) => {
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </section>
+        <Utterences repo="https://github.com/snowjang24/jsnow-dev-blog" />
         <aside className="post-toc-container">
           <Toc tableOfContents={tableOfContents} />
         </aside>
