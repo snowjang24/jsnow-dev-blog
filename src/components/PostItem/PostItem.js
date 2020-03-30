@@ -4,19 +4,19 @@ import Tag from "../Tag";
 import { Link } from "gatsby";
 
 export default ({ url, title, date, tags }) => {
-  return (
-    <Link to={`/posts/${url}`}>
-      <Styled.PostItem>
-        <h2 className="title">{`📝 ${title}`}</h2>
-        <p className="date">{date}</p>
-        <ul className="tags">
-          {tags.map(tag => (
-            <li className="tag-container">
-              <Tag name={tag} />
-            </li>
-          ))}
-        </ul>
-      </Styled.PostItem>
-    </Link>
+  const PostItem = (
+    <Styled.PostItem className={url ? "active" : ""}>
+      <h2 className="title">{`📝 ${title}`}</h2>
+      <p className="date">{date}</p>
+      <ul className="tags">
+        {tags.map(tag => (
+          <li className="tag-container">
+            <Tag name={tag} />
+          </li>
+        ))}
+      </ul>
+    </Styled.PostItem>
   );
+  if (url) return <Link to={`/posts/${url}`}>{PostItem}</Link>;
+  return PostItem;
 };

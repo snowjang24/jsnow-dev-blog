@@ -9,6 +9,11 @@ export const Content = styled.div`
   .post-body-container,
   .post-title-container {
     margin-bottom: 2rem;
+    position: relative;
+  }
+  .post-title-container {
+    margin-top: 3rem;
+    z-index: 10;
   }
   .post-toc-container {
     position: fixed;

@@ -52,7 +52,6 @@ const Posts = styled.div`
     font-size: 1.5rem;
   }
   .posts {
-    list-style: none;
     margin-left: 0;
   }
 `;

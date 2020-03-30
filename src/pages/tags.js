@@ -17,18 +17,18 @@ export default () => {
     }
   `);
   const group = data.allMarkdownRemark.group;
-  console.log(group);
   return (
     <Layout title="Tags">
       <Tags className="tags-list _responsive">
         <h2 className="list-title">🏷 Tags List</h2>
         <ul className="tags">
           {group.map(tag => (
-            <li key={tag.fieldValue}>
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} - {tag.totalCount}
-              </Link>
-            </li>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              <li className="tag" key={tag.fieldValue}>
+                <div className="tag-name">{tag.fieldValue}</div>
+                <div className="tag-count">{tag.totalCount}</div>
+              </li>
+            </Link>
           ))}
         </ul>
       </Tags>
@@ -47,5 +47,16 @@ const Tags = styled.div`
   .tags {
     list-style: none;
     margin-left: 0;
+  }
+  .tag {
+    padding: 16px 24px;
+    border: 1px solid #cfd6db;
+    border-radius: 16px;
+    display: flex;
+    margin-bottom: 4px;
+    font-weight: bold;
+  }
+  .tag-name {
+    flex: 1;
   }
 `;

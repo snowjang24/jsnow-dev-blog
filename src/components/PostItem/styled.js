@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const PostItem = styled.li`
+  list-style: none;
   padding: 16px 24px;
   border: 1px solid #cfd6db;
   border-radius: 16px;
@@ -22,12 +23,14 @@ export const PostItem = styled.li`
   .tag-container {
     margin: 0 4px 0 0;
   }
-  &:hover {
-    transform: scale(1.02);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  &:active {
-    transform: scale(1);
-    box-shadow: none;
+  &.active {
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    &:active {
+      transform: scale(1);
+      box-shadow: none;
+    }
   }
 `;

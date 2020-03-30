@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Toc, Utterences } from "../../components";
+import { Toc, Utterences, PostItem } from "../../components";
 import { Layout } from "../../structures";
 
 import * as Styled from "./styled";
@@ -21,19 +21,14 @@ export const query = graphql`
 
 export default ({ data }) => {
   const markDown = data.markdownRemark;
-  const frontmatter = markDown.frontmatter;
+  const { title, date, tags } = markDown.frontmatter;
   const html = markDown.html;
   const tableOfContents = markDown.tableOfContents;
   return (
-    <Layout title={frontmatter.title}>
+    <Layout title={title}>
       <Styled.Content className="content _responsive">
         <header className="post-title-container">
-          <Styled.PostTitle className="post-title">
-            <div className="title-container">
-              <div className="title">{`📝 ${frontmatter.title}`}</div>
-              <div className="date">{frontmatter.date}</div>
-            </div>
-          </Styled.PostTitle>
+          <PostItem title={title} date={date} tags={tags} />
         </header>
         <section className="post-body-container">
           <Styled.PostBody
