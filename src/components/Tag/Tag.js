@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "gatsby";
 import _ from "lodash";
 import { FiHash } from "react-icons/fi";
+
 import * as Styled from "./styled";
 
 export default ({ name }) => {
-  const handleClick = e => {
+  const handleClick = (e) => {
     e.stopPropagation();
   };
   return (
