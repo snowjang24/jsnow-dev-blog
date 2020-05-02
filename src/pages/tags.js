@@ -48,7 +48,7 @@ const Tags = styled.div`
   }
   .tags {
     list-style: none;
-    margin-left: 1rem;
+    margin: 0;
   }
 `;
 
