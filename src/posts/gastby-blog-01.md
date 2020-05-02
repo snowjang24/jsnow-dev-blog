@@ -6,7 +6,7 @@ tags: ["gatsby", "blog"]
 
 # Gatsby와 React로 만드는 블로그 - 01
 
-## ✏️Gatsby로 블로그 틀 만들기
+## Gatsby로 블로그 틀 만들기
 
 ### Gatsby 설치와 명령어
 

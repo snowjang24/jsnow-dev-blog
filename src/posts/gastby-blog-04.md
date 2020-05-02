@@ -6,7 +6,7 @@ tags: ["gatsby", "blog"]
 
 # Gatsby와 React로 만드는 블로그 - 04
 
-## ✏️블로그 데이터 다루기
+## 블로그 데이터 다루기
 
 ### GraphQL
 

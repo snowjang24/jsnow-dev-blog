@@ -5,7 +5,7 @@ tags: ["gatsby", "blog"]
 ---
 # Gatsby와 React로 만드는 블로그
 
-## ✏️Gatsby로 만든 페이지 배포하기
+## Gatsby로 만든 페이지 배포하기
 
 ### Netlify를 이용한 배포
 

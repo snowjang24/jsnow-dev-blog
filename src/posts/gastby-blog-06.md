@@ -5,7 +5,7 @@ tags: ["gatsby", "blog"]
 ---
 # Gatsby와 React로 만드는 블로그 - 06
 
-## ✏️추가적인 세팅
+## 추가적인 세팅
 
 ### Post에 이미지 더하기
 

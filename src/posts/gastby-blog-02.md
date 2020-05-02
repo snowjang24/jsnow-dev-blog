@@ -6,7 +6,7 @@ tags: ["gatsby", "blog"]
 
 # Gatsby와 React로 만드는 블로그 - 02 
 
-## ✏️Header, Footer
+## Header, Footer
 
 ### 링크 태그? 링크 컴포넌트!
 
