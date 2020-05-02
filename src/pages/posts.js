@@ -29,7 +29,7 @@ const PostsPage = () => {
       <Posts className="posts-list _responsive">
         <h2 className="list-title">🗂 Posts List</h2>
         <ul className="posts">
-          {data.allMarkdownRemark.edges.map(edge => (
+          {data.allMarkdownRemark.edges.map((edge) => (
             <PostItem
               url={edge.node.fields.slug}
               title={edge.node.frontmatter.title}
@@ -50,6 +50,7 @@ const Posts = styled.div`
   margin-top: 36px;
   .list-title {
     font-size: 1.5rem;
+    color: #333;
   }
   .posts {
     margin-left: 0;

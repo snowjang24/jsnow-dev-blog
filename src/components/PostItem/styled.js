@@ -9,6 +9,8 @@ export const PostItem = styled.li`
   .title {
     font-size: 1.15rem;
     margin-bottom: 16px;
+    font-weight: normal;
+    color: #504c4c;
   }
   .tags {
     list-style: none;

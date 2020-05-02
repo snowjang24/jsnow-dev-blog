@@ -23,7 +23,7 @@ export default () => {
       <Tags className="tags-list _responsive">
         <h2 className="list-title">🏷 Tags List</h2>
         <ul className="tags">
-          {group.map(tag => (
+          {group.map((tag) => (
             <TagItem
               url={kebabCase(tag.fieldValue)}
               name={tag.fieldValue}
@@ -43,6 +43,7 @@ const Tags = styled.div`
   margin-top: 36px;
   .list-title {
     font-size: 1.5rem;
+    color: #333;
   }
   .tags {
     list-style: none;
