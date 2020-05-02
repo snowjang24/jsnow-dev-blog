@@ -6,8 +6,8 @@ export default ({ url, name, count }) => {
   return (
     <Link to={`/tags/${url}/`}>
       <Styled.TagItem class="tag" key={name}>
-        <div className="count">{count}</div>
         <div className="name">{name}</div>
+        <div className="count">{count}</div>
       </Styled.TagItem>
     </Link>
   );

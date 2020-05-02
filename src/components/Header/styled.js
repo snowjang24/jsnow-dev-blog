@@ -10,9 +10,26 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .logo-container {
+  .logo-container > a {
+    display: flex;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    align-items: center;
+  }
+  .logo-img {
+    margin: 0 8px 0 0;
     width: 40px;
     height: 40px;
+  }
+  .blog-name {
+    position: relative;
+    &::after {
+      content: ";";
+      font-weight: bold;
+      color: #2b92fd;
+      position: absolute;
+      right: -8px;
+    }
   }
 `;
 

@@ -15,7 +15,8 @@ export default ({ className }) => {
     <Styled.Header className={className}>
       <div className="logo-container">
         <Link to="/">
-          <img src={jsnow_logo} alt="jsnow blog logo" />
+          <img src={jsnow_logo} className="logo-img" alt="jsnow blog logo" />
+          <span className="blog-name">JSnow Blog</span>
         </Link>
       </div>
       <Styled.Navbar className="navbar">
