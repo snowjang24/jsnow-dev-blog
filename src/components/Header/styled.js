@@ -21,15 +21,12 @@ export const Header = styled.header`
     width: 40px;
     height: 40px;
   }
-  .blog-name {
-    position: relative;
-    &::after {
-      content: ";";
-      font-weight: bold;
-      color: #2b92fd;
-      position: absolute;
-      right: -8px;
-    }
+  .blog-name:after {
+    content: ";";
+    margin-left: 2px;
+    font-weight: bold;
+    color: #2b92fd;
+    right: 0;
   }
 `;
 
