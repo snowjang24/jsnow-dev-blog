@@ -1,12 +1,12 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 import kebabCase from "lodash/kebabCase";
 
 import { TagItem } from "../components";
 import { Layout } from "../structures";
-import { Link, graphql, useStaticQuery } from "gatsby";
 
-export default () => {
+const TagsPage = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(limit: 2000) {
@@ -17,6 +17,7 @@ export default () => {
       }
     }
   `);
+
   const group = data.allMarkdownRemark.group;
   return (
     <Layout title="Tags">
@@ -50,3 +51,5 @@ const Tags = styled.div`
     margin-left: 1rem;
   }
 `;
+
+export default TagsPage;

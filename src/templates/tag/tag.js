@@ -1,7 +1,8 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { Layout } from "../../structures";
 import { PostItem } from "../../components";
+
 import * as Styled from "./styled";
 
 export const data = graphql`

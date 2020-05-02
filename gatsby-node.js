@@ -8,7 +8,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
     createNodeField({
       node,
       name: "slug",
-      value: slug
+      value: slug,
     });
   }
 };
@@ -43,24 +43,24 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
   const posts = res.data.postsRemark.edges;
-  posts.forEach(edge => {
+  posts.forEach((edge) => {
     createPage({
       component: postTemplate,
       path: `/posts/${edge.node.fields.slug}`,
       context: {
-        slug: edge.node.fields.slug
-      }
+        slug: edge.node.fields.slug,
+      },
     });
   });
 
   const tags = res.data.tagsGroup.group;
-  tags.forEach(tag => {
+  tags.forEach((tag) => {
     createPage({
-      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
       component: tagTemplate,
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
       context: {
-        tag: tag.fieldValue
-      }
+        tag: tag.fieldValue,
+      },
     });
   });
 };
