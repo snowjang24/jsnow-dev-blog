@@ -61,6 +61,11 @@ export const PostBody = styled.div`
     color: #3d3d3d;
     word-break: keep-all;
   }
+  h1,
+  h2,
+  h3 {
+    font-family: "Noto Sans KR", sans-serif;
+  }
   h1::before,
   h2::before,
   h3::before {
