@@ -9,7 +9,7 @@ import jsnow_logo from "../../../static/jsnow_logo.svg";
 export default ({ className }) => {
   const routes = [
     { name: "posts", url: "/posts", icon: MdFolder },
-    { name: "tags", url: "/tags", icon: IoMdPricetags }
+    { name: "tags", url: "/tags", icon: IoMdPricetags },
   ];
   return (
     <Styled.Header className={className}>
@@ -19,7 +19,7 @@ export default ({ className }) => {
         </Link>
       </div>
       <Styled.Navbar className="navbar">
-        {routes.map(route => (
+        {routes.map((route) => (
           <li className="btn-container">
             <Link to={route.url}>
               <route.icon />

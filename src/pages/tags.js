@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import kebabCase from "lodash/kebabCase";
 
+import { TagItem } from "../components";
 import { Layout } from "../structures";
 import { Link, graphql, useStaticQuery } from "gatsby";
 
@@ -23,12 +24,11 @@ export default () => {
         <h2 className="list-title">🏷 Tags List</h2>
         <ul className="tags">
           {group.map(tag => (
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              <li className="tag" key={tag.fieldValue}>
-                <div className="tag-name">{tag.fieldValue}</div>
-                <div className="tag-count">{tag.totalCount}</div>
-              </li>
-            </Link>
+            <TagItem
+              url={kebabCase(tag.fieldValue)}
+              name={tag.fieldValue}
+              count={tag.totalCount}
+            ></TagItem>
           ))}
         </ul>
       </Tags>
@@ -46,17 +46,6 @@ const Tags = styled.div`
   }
   .tags {
     list-style: none;
-    margin-left: 0;
-  }
-  .tag {
-    padding: 16px 24px;
-    border: 1px solid #cfd6db;
-    border-radius: 16px;
-    display: flex;
-    margin-bottom: 4px;
-    font-weight: bold;
-  }
-  .tag-name {
-    flex: 1;
+    margin-left: 1rem;
   }
 `;
