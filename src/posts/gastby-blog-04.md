@@ -1,6 +1,6 @@
 ---
 title: Gatsby와 React로 만드는 블로그 - 04
-date: 2019-06-05 12:50:41
+date: 2019-06-05 11:50:41
 tags: ["gatsby", "blog"]
 ---
 
@@ -14,7 +14,7 @@ tags: ["gatsby", "blog"]
 
 <img src="./gatsby-blog/og_image.png" width="70%">
 
-우선 Gatsby는 아래의 그림과 같은 원리로 작동한다. 
+우선 Gatsby는 아래의 그림과 같은 원리로 작동한다.
 
 <img src="./gatsby-blog/image-20190619193858882-0940739.png" width="80%">
 
@@ -28,7 +28,7 @@ module.exports = {
   },
   // in gatsby-config.js
   plugins: [`gatsby-plugin-sass`],
-}
+};
 ```
 
 <br>
@@ -45,7 +45,7 @@ GraphiQL에 접속하면 아래와 같은 화면을 볼 수 있다. 여기서 �
 
 <img src="./gatsby-blog/image-20190619205548500-0945348.png" width="80%">
 
-Graphql에는 **query**, **mutation**, **subscribtion** 3가지 주요한 operation이 있다. 우리는 그 중에 query를 주로 이용할 예정이다. 
+Graphql에는 **query**, **mutation**, **subscribtion** 3가지 주요한 operation이 있다. 우리는 그 중에 query를 주로 이용할 예정이다.
 
 `Query` > `Site` > `siteMetadata` 의 경로로 타고 들어가면 우리가 넣은 `title`과 `author`를 통해 우리가 필요한 데이터에 접근할 수 있다.
 
@@ -65,7 +65,7 @@ query {
 
 <img src="./gatsby-blog/image-20190619212401106-0947041.png" width="90%">
 
-데이터에 접근 가능한 것을 확인했고, 이를 활용하여 웹 페이지의 Title을 반영하려면 다음과 같이 작성하면 된다. GraphQL을 제대로 이용하기 위해서는 `graphql`과 `useStaticQuery` 모듈을` import` 해서 쓴다. 그리고 `data` 변수에 `useStaticQuery()`메서드와 `graphql`메서드를 이용하여 데이터를 받아온다. 여기서 `graphql` 메서드의 이용 방식이 좀 특이하다 앞에서 썼던 쿼리를 Template string의 형식인 Backtick 사이에 넣어서 이용한다.
+데이터에 접근 가능한 것을 확인했고, 이를 활용하여 웹 페이지의 Title을 반영하려면 다음과 같이 작성하면 된다. GraphQL을 제대로 이용하기 위해서는 `graphql`과 `useStaticQuery` 모듈을`import` 해서 쓴다. 그리고 `data` 변수에 `useStaticQuery()`메서드와 `graphql`메서드를 이용하여 데이터를 받아온다. 여기서 `graphql` 메서드의 이용 방식이 좀 특이하다 앞에서 썼던 쿼리를 Template string의 형식인 Backtick 사이에 넣어서 이용한다.
 
 ```javascript
 import React from "react"
@@ -100,8 +100,8 @@ const Header = () => {
 동일한 방법으로 한 번 `Footer`에 author이름을 적용하려면 다음과 같이 작성하면 된다.
 
 ```javascript
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -112,15 +112,15 @@ const Footer = () => {
         }
       }
     }
-  `)
+  `);
   return (
     <footer>
       <p>Created by {data.site.siteMetadata.author}, © 2019</p>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
 ```
 
 로 두 개를 가져오고 싶으면 다음과 같이 작성하여 둘 다 가져올 수 있다.
@@ -131,7 +131,7 @@ export default Footer
 
 ### GraphQL Playground !
 
-graphiql도 유용하지만 좀 더 유용한 도구를 사용해보려 한다. [graphql playground](https://github.com/prisma/graphql-playground)는 GraphiQL와 유사하지만 유용한 기능이 많기 때문에, 좀 더 편한 로컬 개발이 가능하다. 
+graphiql도 유용하지만 좀 더 유용한 도구를 사용해보려 한다. [graphql playground](https://github.com/prisma/graphql-playground)는 GraphiQL와 유사하지만 유용한 기능이 많기 때문에, 좀 더 편한 로컬 개발이 가능하다.
 
 Playground를 사용하기 위해서 루트 폴더에 `.env.development`라는 환경 파일을 만든다. 그리고 다음과 같이 작성하면 된다.
 
@@ -145,13 +145,14 @@ GATSBY_GRAPHQL_IDE=playground
 npm install --save-dev env-cmd
 ```
 
-그리고 이를 이용하기 위해 `package.json`에 있는 `scripts`의  `develop` 부분을 다음과 같이 수정한다.
+그리고 이를 이용하기 위해 `package.json`에 있는 `scripts`의 `develop` 부분을 다음과 같이 수정한다.
 
 ```json
 "develop": "env-cmd .env.development gatsby develop",
 ```
 
-이제 세팅을 다 끝내고 `npm run develop`으로 서버를 키면 다음과 같은 에러를 만나게 된다. 
+이제 세팅을 다 끝내고 `npm run develop`으로 서버를 키면 다음과 같은 에러를 만나게 된다.
+
 ```bash
 > npm run develop
 
@@ -167,7 +168,7 @@ npm ERR! code ELIFECYCLE
 npm ERR! errno 1
 npm ERR! gatsby-starter-hello-world@0.1.0 develop: `env-cmd .env.development gatsby develop`
 npm ERR! Exit status 1
-npm ERR! 
+npm ERR!
 npm ERR! Failed at the gatsby-starter-hello-world@0.1.0 develop script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
@@ -181,7 +182,7 @@ npm ERR!     /Users/soonho/.npm/_logs/2019-06-19T13_22_21_553Z-debug.log
 "develop": "env-cmd -f .env.development gatsby develop",
 ```
 
-이제 준비가 다 끝났다. [http://localhost:8000/___graphql](http://localhost:8000/___graphql)로 접속하면 아까와는 다른 어두운 화면이 나온다. 바로 GraphQL playground다. 아까의 GraphiQL과 동일하게 작동하지만 기능이 좀 더 많고 보기 편하다.
+이제 준비가 다 끝났다. [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql)로 접속하면 아까와는 다른 어두운 화면이 나온다. 바로 GraphQL playground다. 아까의 GraphiQL과 동일하게 작동하지만 기능이 좀 더 많고 보기 편하다.
 
 <img src="./gatsby-blog/image-20190619224217355-0951737.png" width="80%">
 
@@ -282,6 +283,7 @@ query{
   }
 }
 ```
+
 <br>
 
 ### 마크다운을 변환!
@@ -312,8 +314,8 @@ plugins: [
 
 <img src="./gatsby-blog/image-20190625164804981-1448885.png" width="50%">
 
-* `markdownRemark`는 개별적인 post를 fetch한다. 
-* `allMarkdownRemark`는 post목록을 fetch한다.
+- `markdownRemark`는 개별적인 post를 fetch한다.
+- `allMarkdownRemark`는 post목록을 fetch한다.
 
 우리는 `allMarkdownRemark`를 활용하여 블로그 리스트를 만드는 페이지를 완성하려 한다.
 
@@ -458,4 +460,3 @@ const BlogPage = () => {
 ```bash
 Warning: Each child in a list should have a unique "key" prop.
 ```
-

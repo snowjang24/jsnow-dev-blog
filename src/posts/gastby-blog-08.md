@@ -1,6 +1,6 @@
 ---
 title: Gatsby와 React로 만드는 블로그 - 08
-date: 2019-06-08 12:50:41
+date: 2019-06-08 14:50:41
 tags: ["gatsby", "blog"]
 ---
 
