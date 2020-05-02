@@ -3,7 +3,8 @@ title: Gatsby와 React로 만드는 블로그 - 08
 date: 2019-06-08 12:50:41
 tags: ["gatsby", "blog"]
 ---
-# Gatsby와 React로 만드는 블로그
+
+# Gatsby와 React로 만드는 블로그 - 08
 
 ## Gatsby로 만든 페이지 배포하기
 
@@ -66,7 +67,7 @@ tags: ["gatsby", "blog"]
 
 <img src="./gatsby-blog/image-20190628112419100-1688659.png" width="70%">
 
-만약 데이터를 수정하고 데이터를 사이트에 반영하고 싶다면 아래와 같이 Deploys탭에 가서 Trigger deploy를 눌러  Clear cache and deploy site를 눌러 디플로이 할 수 있다.
+만약 데이터를 수정하고 데이터를 사이트에 반영하고 싶다면 아래와 같이 Deploys탭에 가서 Trigger deploy를 눌러 Clear cache and deploy site를 눌러 디플로이 할 수 있다.
 
 <img src="./gatsby-blog/image-20190628112712261-1688832.png" width="70%">
 
