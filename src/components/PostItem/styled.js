@@ -8,7 +8,7 @@ export const PostItem = styled.li`
   transition: all ease 0.3s;
   .title {
     font-size: 1.15rem;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     font-weight: normal;
     color: #504c4c;
   }

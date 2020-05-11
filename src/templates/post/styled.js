@@ -45,7 +45,7 @@ export const PostTitle = styled.div`
 `;
 
 export const PostBody = styled.div`
-  font-family: "Ridi Batang", sans-serif;
+  font-weigh: light;
   a {
     color: #2b92fd;
     will-change: text-shadow;
