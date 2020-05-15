@@ -40,7 +40,7 @@ TDD에서 테스트를 위한 툴(라이브러리)을 찾아보면 Unit test라�
 
 **Mocha**는 Node.js와 브라우저에서 돌아가는 javascript 테스트 프레임 워크다.
 
-<img src="58480ffbcef1014c0b5e4947.png" width="25%">
+<img src="Mocha/58480ffbcef1014c0b5e4947.png" width="25%">
 
 <br>
 
@@ -152,23 +152,23 @@ describe('Basic Mocha String Test', function () {
 
 #### 비동기 테스트
 
-    ```javascript
-    /* Code */
-    function isValidUserIdAsync(userList, user, callback) {
-        setTimeout(function(){
-          callback(userList.indexOf(user) >= 0)
-        }, 1);
-    }   
-    Note: setTimeout has been used to simulate the async behavior.
-    /* Test */
-    it('should return true if valid user id', function(done){
-      loginController.isValidUserIdAsync(['abc123','xyz321'], 'abc123',
-         function(isValid){
-          assert.equal(isValid, true);
-          done();
-      });
-    });
-    ```
+```javascript
+/* Code */
+function isValidUserIdAsync(userList, user, callback) {
+    setTimeout(function(){
+      callback(userList.indexOf(user) >= 0)
+    }, 1);
+}   
+Note: setTimeout has been used to simulate the async behavior.
+/* Test */
+it('should return true if valid user id', function(done){
+  loginController.isValidUserIdAsync(['abc123','xyz321'], 'abc123',
+      function(isValid){
+      assert.equal(isValid, true);
+      done();
+  });
+});
+```
 
 <br>
 

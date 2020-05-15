@@ -62,6 +62,11 @@ export const PostBody = styled.div`
     word-break: keep-all;
   }
   h1,
+  h2 {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eaecef;
+  }
+  h1,
   h2,
   h3 {
     font-family: "Noto Sans KR", sans-serif;

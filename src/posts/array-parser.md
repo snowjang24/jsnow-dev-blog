@@ -15,7 +15,6 @@ tags: ["javascript", "parser"]
 **파서(Parser)**는 이러한 파싱을 수행하는 프로그램입니다. 파서를 세부적으로 나눈다면 세 가지 구성 요소로 나뉩니다.
 
 1. **tokenizer**
-
 2. **lexer**
 3. **parser**
 
@@ -31,15 +30,15 @@ tokenizer, lexer 그리고 parser에 대해 좀 더 자세히 살펴 보겠습�
 
 AST는 input을 축약하여 표현했기 때문에 부모가 없고 괄호가 들어가지 않습니다.
 
-<img src="array-parser/Untitled%201.png" width="50%">
+<img src="array-parser/mpdm.png" width="50%">
 
-> **참고 : 
-1.** [https://tomassetti.me/parsing-in-javascript/](https://tomassetti.me/parsing-in-javascript/)
-**2.** [https://gyujincho.github.io/2018-06-19/AST-for-JS-devlopers](https://gyujincho.github.io/2018-06-19/AST-for-JS-devlopers)
+> **참고 :**
+> 1. [https://tomassetti.me/parsing-in-javascript/](https://tomassetti.me/parsing-in-javascript/)
+> 2. [https://gyujincho.github.io/2018-06-19/AST-for-JS-devlopers](https://gyujincho.github.io/2018-06-19/AST-for-JS-devlopers)
 
 
 
-## 구현 목표
+## 2. 구현 목표
 
 
 - 무한 중첩 구조도 동작하게 한다. [[[[[]]]]]
@@ -59,7 +58,7 @@ console.log(JSON.stringify(result, null, 2));
 
 
 
-## 프로그램 설계 및 구현
+## 3. 프로그램 설계 및 구현
 
 
 ### 1단계 : tokenizer, lexer, parser 설계
