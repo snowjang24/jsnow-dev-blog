@@ -132,7 +132,7 @@ export default BlogPage
 
 ```javascript
 import React from "react"
-```
+
 const AboutPage = () => {
   return (
     <div>
