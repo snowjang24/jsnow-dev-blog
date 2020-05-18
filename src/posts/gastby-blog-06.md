@@ -1,7 +1,7 @@
 ---
 title: Gatsby와 React로 만드는 블로그 - 06
 date: 2019-06-06 12:50:41
-tags: ["gatsby", "blog"]
+tags: ["gatsby", "blog", "tutorial"]
 ---
 # Gatsby와 React로 만드는 블로그 - 06
 
