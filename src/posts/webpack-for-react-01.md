@@ -1,4 +1,10 @@
-# React를 위한 Webpack 배우기
+---
+title: React를 위한 Webpack 배우기 - 01
+date: 2019-11-06 18:50:41
+tags: ["react", "webpack", "tutorial"]
+---
+
+# React를 위한 Webpack 배우기 - 01
 
 해당 포스팅은 아래의 포스트를 번역 및 일부 설명을 추가하여 작성한 글입니다.
 
