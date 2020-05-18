@@ -10,8 +10,6 @@ tags: ["react", "webpack", "tutorial"]
 
 [Learn Webpack for React - Esau Silva](https://esausilva.com/2018/01/13/learn-webpack-for-react/#comment-52112)
 
-# React를 위한 Webpack 배우기
-
 시작하기에 앞서 이번 튜토리얼에서는 아래의 라이브러리를 다룰 예정입니다.
 
 - React 16
@@ -96,24 +94,24 @@ yarn add @babel/core babel-loader @babel/preset-env @babel/preset-react @babel/p
 
 | Package | 내용 |
 | ------- | ---- |
-|react |	리액트|
-|react-dom|	브라우저를 위한 DOM 메서드를 제공|
-|prop-types|	Runtime type checking for React props|
-|react-router-dom	|Provides routing capabilities to React for the browser|
-|semantic-ui-react|	CSS Framework|
-|babel	| Babel is a transpiler that compiles JavaScript ES6 to JavaScript ES5 allowing you to write JavaScript “from the future” so that current browsers will understand it. Detailed description in Quora.|
-|@babel/core	|Core dependencies for Babel|
-|babel-loader|	This package allows transpiling JavaScript files using Babel and webpack|
-|@babel/preset-env|	With this you don’t have to specify if you will be writing ES2015, ES2016 or ES2017. Babel will automatically detect and transpile accordingly.|
-|@babel/preset-react	|Tells Babel we will be using React|
-|@babel/plugin-proposal-class-properties|	Use class properties. We don’t use Class Properties in this project, but you will more than likely use them in your project|
-|@babel/plugin-syntax-dynamic-import	|Be able to use dynamic imports|
-|css-loader	|Interprets @import and url() like import/require() and will resolve them|
-|html-webpack-plugin|	Can generate an HTML file for your application, or you can provide a template|
-|style-loader|	CSS를 <style>태그로 DOM에 추가함|
-|webpack	|모듈 번들러(Module Bundler)|
-|webpack-cli	|Webpack 4.0.1 혹은 그 이상에서 필요한 커맨드라인 인터페이스|
-|webpack-dev-server	|애플리케이션을 위한 개발 서버를 제공함|
+| react |	리액트 |
+| react-dom |	브라우저를 위한 DOM 메서드를 제공 |
+| prop-types |	Runtime type checking for React props |
+| react-router-dom	| Provides routing capabilities to React for the browser |
+| semantic-ui-react |	CSS Framework |
+| babel	| Babel is a transpiler that compiles JavaScript ES6 to JavaScript ES5 allowing you to write JavaScript “from the future” so that current browsers will understand it. Detailed description in Quora. |
+| @babel/core	| Core dependencies for Babel |
+| babel-loader|	This package allows transpiling JavaScript files using Babel and webpack |
+| @babel/preset-env |	With this you don’t have to specify if you will be writing ES2015, ES2016 or ES2017. Babel will automatically detect and transpile accordingly. |
+| @babel/preset-react	| Tells Babel we will be using React |
+| @babel/plugin-proposal-class-properties |	Use class properties. We don’t use Class Properties in this project, but you will more than likely use them in your project |
+| @babel/plugin-syntax-dynamic-import	| Be able to use dynamic imports |
+| css-loader	| Interprets @import and url() like import/require() and will resolve them |
+| html-webpack-plugin |	Can generate an HTML file for your application, or you can provide a template |
+| style-loader|	CSS를 `<style>`태그로 DOM에 추가함 |
+| webpack	| 모듈 번들러(Module Bundler) |
+| webpack-cli	| Webpack 4.0.1 혹은 그 이상에서 필요한 커맨드라인 인터페이스 |
+| webpack-dev-server | 애플리케이션을 위한 개발 서버를 제공함 |
 
 ## Babel 설정
 
