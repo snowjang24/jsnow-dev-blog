@@ -1,3 +1,9 @@
+---
+title: React를 위한 Webpack 배우기 - 02
+date: 2020-05-25 18:50:41
+tags: ["react", "webpack", "tutorial"]
+---
+
 # React를 위한 Webpack - 02
 
 ## React 애플리케이션 만들기
