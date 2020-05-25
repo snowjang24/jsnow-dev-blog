@@ -1,6 +1,6 @@
 ---
 title: React를 위한 Webpack 배우기 - 01
-date: 2019-11-06 18:50:41
+date: 2020-05-20 18:50:41
 tags: ["react", "webpack", "tutorial"]
 ---
 
