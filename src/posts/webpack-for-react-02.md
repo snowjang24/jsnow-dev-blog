@@ -265,11 +265,11 @@ export default NoMatch;
 yarn start
 ```
 
-![webpack-for-react-02/screencast_2020-05-26_01-32-45.gif](webpack-for-react-02/screencast_2020-05-26_01-32-45.gif)
+<img src="webpack-for-react-02/screencast_2020-05-26_01-32-45.gif" width="100%"/>
 
 아래와 같이 `bundle.acea4f909ffe8524a456.js`라는 이름이 눈에 띕니다.
 
-![webpack-for-react-02/Untitled.png](webpack-for-react-02/Untitled.png)
+<img src="webpack-for-react-02/Untitled.png" width="50%"/>
 
 `webpack.config.js`에서 설정한대로 파일 이름이 생성되었음을 확인할 수 있습니다.
 
