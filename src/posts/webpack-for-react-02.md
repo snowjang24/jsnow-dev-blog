@@ -210,7 +210,7 @@ const DynamicPage = () => {
 export default DynamicPage;
 ```
 
-## NoMatch
+### NoMatch
 
 `NoMatch.js`에 아래와 같이 코드를 작성합니다. 
 
@@ -264,8 +264,6 @@ export default NoMatch;
 ```bash
 yarn start
 ```
-
-<img src="webpack-for-react-02/screencast_2020-05-26_01-32-45.gif" width="100%"/>
 
 아래와 같이 `bundle.acea4f909ffe8524a456.js`라는 이름이 눈에 띕니다.
 
