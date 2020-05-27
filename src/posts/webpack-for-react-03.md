@@ -19,7 +19,7 @@ yarn add react-hot-loader @hot-loader/react-dom -D
 
 `.babelrc`를 열고 아래와 같이 코드를 수정합니다.
 
-```jsx
+```javascript
 {
   "presets": [
 		// modules: false
@@ -38,7 +38,7 @@ yarn add react-hot-loader @hot-loader/react-dom -D
 
 `webpack.config.js`파일을 열어 아래와 같이 수정합니다. 
 
-```jsx
+```javascript
 ...
 module.exports = {
   output: {
@@ -69,7 +69,7 @@ module.exports = {
 
 `index.js`를 아래와 같이 변경하여 최종적으로 HMR을 적용합니다.
 
-```jsx
+```javascript
 import { hot } from "react-hot-loader/root";
 import React from "react";
 import ReactDOM from "react-dom";
@@ -85,7 +85,7 @@ render(hot(App));
 
 HMR 적용 테스트를 위해 아래와 같이 App.js를 수정하여 페이지를 로드합니다.
 
-```jsx
+```javascript
 import React from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -120,7 +120,7 @@ yarn start
 
 `Home.js`에 아래와 같이 수정하고 저장하면 별도의 새로고침 없이 글자가 바뀌는 것을 확인할 수 있습니다.
 
-```jsx
+```javascript
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -170,7 +170,7 @@ touch ./src/components/Loading.js
 
 `Loading` 컴포넌트에 아래와 같이 코드를 작성합니다. `Loader`는 `semantic-ui-react`에서 불러와 추가합니다.
 
-```jsx
+```javascript
 import React from "react";
 import { Loader } from "semantic-ui-react";
 import ReactDelayRender from "react-delay-render";
@@ -184,7 +184,7 @@ export default ReactDelayRender({
 
 `App.js`를 열어 아래와 같이 비동기 처리를 합니다. 아래의 `/* webpackChunkName: - */`의 경우 Chunk 이름을 지정하기 위한 주석입니다. 아래에서 결과를 확인할 때 다시 설명하겠습니다.
 
-```jsx
+```javascript
 import React from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import importedComponent from "react-imported-component";
@@ -230,7 +230,7 @@ export default App;
 
 이제 번들의 파일 명을 바꿔 줍니다. `webpack.config.js`를 열어 아래와 같이 수정합니다.
 
-```jsx
+```javascript
 ...
 module.exports = {
   ...
@@ -261,7 +261,7 @@ yarn start
 
 추가로, 아까 앞에서 Chunk 이름과 관련된 주석은 Chunk 이름을 지정하기 위함입니다. 
 
-```jsx
+```javascript
 ...
 const AsyncDynamicPAge = importedComponent(
   () => import(/* webpackChunkName:'DynamicPage' */ "./DynamicPage"),
@@ -282,7 +282,7 @@ const AsyncNoMatch = importedComponent(
 
 만약 아래와 같이 주석을 지우게 될 경우 Chunk 이름이 사라진 것을 볼 수 있습니다.
 
-```jsx
+```javascript
 ...
 const AsyncDynamicPAge = importedComponent( () => import("./DynamicPage"),
   {
@@ -303,7 +303,7 @@ const AsyncNoMatch = importedComponent( () => import("./NoMatch"),
 
 이번에는 vendor를 기준으로 앱을 나눠보도록 하겠습니다 `webpack.config.js`에 아래와 같이 설정을 바꿔 봅시다.
 
-```jsx
+```javascript
 ...
 module.exports = {
 ...
@@ -343,7 +343,7 @@ module.exports = {
 
 아래는 `webpack.config.js`의 전체 코드입니다.
 
-```jsx
+```javascript
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const port = process.env.PORT || 3000;

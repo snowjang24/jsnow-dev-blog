@@ -66,7 +66,7 @@ mkdir src && cd $_
 touch index.js
 ```
 
-```jsx
+```javascript
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
@@ -107,7 +107,7 @@ touch App.js Layout.js layout.css Home.js DynamicPage.js NoMatch.js
 
 `App.js`에 아래와 같은 코드를 작성합니다. React 앱의 가장 기본이 되는 코드입니다.
 
-```jsx
+```javascript
 import React from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -139,7 +139,7 @@ export default App;
 
 `Layout.js`에 아래와 같이 코드를 작성합니다. Layout은 우리가 만들 웹의 레이아웃을 정의하는 컨테이너 역할을 하는 컴포넌트 입니다. CSS Modules를 이용하여 `layout.css`에서 필요한 스타일을 `import`합니다.
 
-```jsx
+```javascript
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header, Container, Divider, Icon } from 'semantic-ui-react';
@@ -172,7 +172,7 @@ export default Layout;
 
 `Home.js`에 아래와 같이 코드를 작성합니다. 
 
-```jsx
+```javascript
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -196,7 +196,7 @@ export default Home;
 
 `Dynamic.js`에 아래와 같이 코드를 작성합니다. 
 
-```jsx
+```javascript
 import React from 'react';
 import { Header } from 'semantic-ui-react';
 
@@ -218,7 +218,7 @@ export default DynamicPage;
 
 `NoMatch.js`에 아래와 같이 코드를 작성합니다. 
 
-```jsx
+```javascript
 import React from 'react';
 import { Icon, Header } from 'semantic-ui-react';
 
@@ -240,7 +240,7 @@ export default NoMatch;
 
 리액트 컴포넌트 구성을 끝내고, 앱을 실행하기 전 `package.json`을 열어 아래와 같이 실행 명령 스크립트를 추가합니다.
 
-```jsx
+```javascript
 {
   "name": "webpack-for-react",
   "version": "1.0.0",
@@ -275,7 +275,7 @@ yarn start
 
 `webpack.config.js`에서 설정한대로 파일 이름이 생성되었음을 확인할 수 있습니다.
 
-```jsx
+```javascript
 ...
 module.exports = {
   mode: "development",
