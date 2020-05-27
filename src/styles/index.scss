@@ -627,8 +627,9 @@ pre tt:after {
   -webkit-overflow-scrolling: touch;
   margin-bottom: 1.45rem;
   pre[class*="language-"] {
-    border-radius: 0;
+    border-radius: 8px;
     &::before {
+      border-radius: 0 6px;
       font-size: 0.6rem;
       font-weight: bold;
       font-family: inherit;
