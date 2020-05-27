@@ -142,7 +142,7 @@ export default Home;
 
 만약 이 변화를 확인해 보고 싶으면 개발자 도구에서 더 많은 도구에서 Rendering → Paint flashing 체크 하고 저장하면 해당 `<p>`태그에 초록색으로 표시가 되는 것을 볼 수 있습니다.
 
-<img src="webpack-for-react-03/Untitled%201.png"/>
+<img src="webpack-for-react-03/Untitled_1.png"/>
 
 ## 코드 분할(Code Splitting)
 
@@ -249,7 +249,7 @@ yarn start
 
 아래에서 볼 수 있듯이 번들 파일이 생성되었습니다.
 
-<img src="webpack-for-react-03/Untitled%202.png"/>
+<img src="webpack-for-react-03/Untitled_2.png"/>
 
 개발자 도구로 보면 처음에 `app.[hash].js`파일이 먼저 로드 된 것을 확인할 수 있습니다.
 
@@ -278,7 +278,7 @@ const AsyncNoMatch = importedComponent(
 ...
 ```
 
-<img src="webpack-for-react-03/Untitled%202.png"/>
+<img src="webpack-for-react-03/Untitled_2.png"/>
 
 만약 아래와 같이 주석을 지우게 될 경우 Chunk 이름이 사라진 것을 볼 수 있습니다.
 
@@ -297,7 +297,7 @@ const AsyncNoMatch = importedComponent( () => import("./NoMatch"),
 ...
 ```
 
-<img src="webpack-for-react-03/Untitled%203.png"/>
+<img src="webpack-for-react-03/Untitled_3.png"/>
 
 ### Vendor 기준
 
@@ -339,7 +339,7 @@ module.exports = {
 
 실행하면 아래와 같이 `styles`와 `vendor` Chunk가 추가되어 있는 것을 확인할 수 있습니다.
 
-<img src="webpack-for-react-03/Untitled%204.png"/>
+<img src="webpack-for-react-03/Untitled_4.png"/>
 
 아래는 `webpack.config.js`의 전체 코드입니다.
 
