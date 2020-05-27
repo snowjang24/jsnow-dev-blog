@@ -6,9 +6,8 @@ tags: ["react", "webpack", "tutorial"]
 
 # React를 위한 Webpack 배우기 - 01
 
-해당 포스팅은 아래의 포스트를 번역 및 일부 설명을 추가하여 작성한 글입니다.
-
-[Learn Webpack for React - Esau Silva](https://esausilva.com/2018/01/13/learn-webpack-for-react/#comment-52112)
+> 해당 포스팅은 아래의 포스트를 번역 및 일부 설명을 추가하여 작성한 글입니다.
+> [Learn Webpack for React - Esau Silva](https://esausilva.com/2018/01/13/learn-webpack-for-react/#comment-52112)
 
 시작하기에 앞서 이번 튜토리얼에서는 아래의 라이브러리를 다룰 예정입니다.
 

@@ -6,6 +6,10 @@ tags: ["react", "webpack", "tutorial"]
 
 # React를 위한 Webpack - 02
 
+> 해당 포스팅은 아래의 포스트를 번역 및 일부 설명을 추가하여 작성한 글입니다.
+> [Learn Webpack for React - Esau Silva](https://esausilva.com/2018/01/13/learn-webpack-for-react/#comment-52112)
+
+
 ## React 애플리케이션 만들기
 
 ### index 생성
@@ -65,7 +69,7 @@ touch index.js
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "../components/App";
+import App from "./components/App";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
