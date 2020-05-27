@@ -116,7 +116,7 @@ export default App;
 yarn start
 ```
 
-![webpack-for-react-03/Untitled.png](webpack-for-react-03/Untitled.png)
+<img src="webpack-for-react-03/Untitled.png"/>
 
 `Home.js`에 아래와 같이 수정하고 저장하면 별도의 새로고침 없이 글자가 바뀌는 것을 확인할 수 있습니다.
 
@@ -142,7 +142,7 @@ export default Home;
 
 만약 이 변화를 확인해 보고 싶으면 개발자 도구에서 더 많은 도구에서 Rendering → Paint flashing 체크 하고 저장하면 해당 `<p>`태그에 초록색으로 표시가 되는 것을 볼 수 있습니다.
 
-![webpack-for-react-03/Untitled%201.png](webpack-for-react-03/Untitled%201.png)
+<img src="webpack-for-react-03/Untitled%201.png"/>
 
 ## 코드 분할(Code Splitting)
 
@@ -249,15 +249,15 @@ yarn start
 
 아래에서 볼 수 있듯이 번들 파일이 생성되었습니다.
 
-![webpack-for-react-03/Untitled%202.png](webpack-for-react-03/Untitled%202.png)
+<img src="webpack-for-react-03/Untitled%202.png"/>
 
 개발자 도구로 보면 처음에 `app.[hash].js`파일이 먼저 로드 된 것을 확인할 수 있습니다.
 
-![webpack-for-react-03/webpack-for-react_2020-05-27_01-03-25.png](webpack-for-react-03/webpack-for-react_2020-05-27_01-03-25.png)
+<img src="webpack-for-react-03/webpack-for-react_2020-05-27_01-03-25.png"/>
 
 그런 다음 링크를 통해 Dynamic Page로 이동하면 아래와 같이 `DynamicPage.[hash].js`가 추가되는 것을 확인할 수 있습니다. 이와 더불어 그 어떤 페이지에서도 `NoMatch` 컴포넌트가 로드되지 않습니다. 
 
-![webpack-for-react-03/webpack-for-react_2020-05-27_01-01-59.png](webpack-for-react-03/webpack-for-react_2020-05-27_01-01-59.png)
+<img src="webpack-for-react-03/webpack-for-react_2020-05-27_01-01-59.png"/>
 
 추가로, 아까 앞에서 Chunk 이름과 관련된 주석은 Chunk 이름을 지정하기 위함입니다. 
 
@@ -278,7 +278,7 @@ const AsyncNoMatch = importedComponent(
 ...
 ```
 
-![webpack-for-react-03/Untitled%202.png](webpack-for-react-03/Untitled%202.png)
+<img src="webpack-for-react-03/Untitled%202.png"/>
 
 만약 아래와 같이 주석을 지우게 될 경우 Chunk 이름이 사라진 것을 볼 수 있습니다.
 
@@ -297,7 +297,7 @@ const AsyncNoMatch = importedComponent( () => import("./NoMatch"),
 ...
 ```
 
-![webpack-for-react-03/Untitled%203.png](webpack-for-react-03/Untitled%203.png)
+<img src="webpack-for-react-03/Untitled%203.png"/>
 
 ### Vendor 기준
 
@@ -339,7 +339,7 @@ module.exports = {
 
 실행하면 아래와 같이 `styles`와 `vendor` Chunk가 추가되어 있는 것을 확인할 수 있습니다.
 
-![webpack-for-react-03/Untitled%204.png](webpack-for-react-03/Untitled%204.png)
+<img src="webpack-for-react-03/Untitled%204.png"/>
 
 아래는 `webpack.config.js`의 전체 코드입니다.
 
