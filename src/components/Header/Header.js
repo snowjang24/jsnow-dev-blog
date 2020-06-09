@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { MdFolder } from "react-icons/md";
+import { MdFolder, MdQueueMusic } from "react-icons/md";
 import { IoMdPricetags } from "react-icons/io";
 
 import * as Styled from "./styled";
@@ -10,6 +10,7 @@ export default ({ className }) => {
   const routes = [
     { name: "posts", url: "/posts", icon: MdFolder },
     { name: "tags", url: "/tags", icon: IoMdPricetags },
+    { name: "music", url: "/music", icon: MdQueueMusic },
   ];
   return (
     <Styled.Header className={className}>
