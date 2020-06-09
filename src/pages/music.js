@@ -10,25 +10,24 @@ const MusicPage = () => {
         <h2 className="list-title">📻 Music List</h2>
         <p>코딩을 위한 음악 플레이 리스트 🎶</p>
         <MediaType>
-          <AiFillYoutube />
+          <AiFillYoutube className="youtube" />
           Youtube Music
         </MediaType>
         <GoLink>
           <a
-            class="go-link"
             href="https://www.youtube.com/playlist?list=PLDxXNjzT5E_lrOQvFU0WYO7S1hh79pWWD"
             target="_blank"
           >
-            Go To Youtube
+            Go to Youtube
           </a>
         </GoLink>
         <MusicList
-          src="https://www.youtube.com/embed/videoseries?list=PLDxXNjzT5E_lrOQvFU0WYO7S1hh79pWWD"
+          src="https://www.youtube.com/embed/embed/?listType=playlist&list=PLDxXNjzT5E_lrOQvFU0WYO7S1hh79pWWD"
           frameborder="0"
           allowfullscreen
         ></MusicList>
         <MediaType>
-          <AiFillApple />
+          <AiFillApple className="apple" />
           Apple Music
         </MediaType>
         <GoLink>
@@ -36,7 +35,7 @@ const MusicPage = () => {
             href="https://music.apple.com/kr/playlist/supa-cool/pl.u-NpXmza7tmR4qb0g?l=en"
             target="_blank"
           >
-            Go To Apple Music
+            Go to Apple Music
           </a>
         </GoLink>
 
@@ -85,8 +84,14 @@ const MusicList = styled.iframe`
 const MediaType = styled.h3`
   display: flex;
   align-items: center;
-  > svg {
+  svg {
     margin-right: 8px;
+  }
+  svg.apple {
+    color: #99a9b5;
+  }
+  svg.youtube {
+    color: #ff0000;
   }
 `;
 
