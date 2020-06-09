@@ -8,20 +8,38 @@ const MusicPage = () => {
     <Layout title="Music">
       <Music className="posts-list _responsive">
         <h2 className="list-title">📻 Music List</h2>
+        <p>코딩을 위한 음악 플레이 리스트 🎶</p>
         <MediaType>
           <AiFillYoutube />
           Youtube Music
         </MediaType>
+        <GoLink>
+          <a
+            class="go-link"
+            href="https://www.youtube.com/playlist?list=PLDxXNjzT5E_lrOQvFU0WYO7S1hh79pWWD"
+            target="_blank"
+          >
+            Go To Youtube
+          </a>
+        </GoLink>
         <MusicList
           src="https://www.youtube.com/embed/videoseries?list=PLDxXNjzT5E_lrOQvFU0WYO7S1hh79pWWD"
           frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></MusicList>
         <MediaType>
           <AiFillApple />
           Apple Music
         </MediaType>
+        <GoLink>
+          <a
+            href="https://music.apple.com/kr/playlist/supa-cool/pl.u-NpXmza7tmR4qb0g?l=en"
+            target="_blank"
+          >
+            Go To Apple Music
+          </a>
+        </GoLink>
+
         <div>
           <MusicList
             allow="autoplay *; encrypted-media *;"
@@ -44,6 +62,14 @@ const Music = styled.div`
   .list-title {
     font-size: 1.5rem;
     color: #333;
+  }
+`;
+
+const GoLink = styled.div`
+  color: #2b92fd;
+  margin-bottom: 16px;
+  &:hover {
+    color: gray;
   }
 `;
 
