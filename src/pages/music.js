@@ -10,34 +10,39 @@ const MusicPage = () => {
         <h2 className="list-title">📻 Music List</h2>
         <p>코딩을 위한 음악 플레이 리스트 🎶</p>
         <MediaType>
-          <AiFillYoutube className="youtube" />
-          Youtube Music
+          <h3 class="title">
+            <AiFillYoutube className="youtube" />
+            Youtube Music
+          </h3>
+          <GoLink>
+            <a
+              href="https://www.youtube.com/playlist?list=PLDxXNjzT5E_lrOQvFU0WYO7S1hh79pWWD"
+              target="_blank"
+            >
+              Go to Youtube
+            </a>
+          </GoLink>
         </MediaType>
-        <GoLink>
-          <a
-            href="https://www.youtube.com/playlist?list=PLDxXNjzT5E_lrOQvFU0WYO7S1hh79pWWD"
-            target="_blank"
-          >
-            Go to Youtube
-          </a>
-        </GoLink>
+
         <MusicList
           src="https://www.youtube.com/embed/embed/?listType=playlist&list=PLDxXNjzT5E_lrOQvFU0WYO7S1hh79pWWD"
           frameborder="0"
           allowfullscreen
         ></MusicList>
         <MediaType>
-          <AiFillApple className="apple" />
-          Apple Music
+          <h3 className="title">
+            <AiFillApple className="apple" />
+            Apple Music
+          </h3>
+          <GoLink>
+            <a
+              href="https://music.apple.com/kr/playlist/supa-cool/pl.u-NpXmza7tmR4qb0g?l=en"
+              target="_blank"
+            >
+              Go to Apple Music
+            </a>
+          </GoLink>
         </MediaType>
-        <GoLink>
-          <a
-            href="https://music.apple.com/kr/playlist/supa-cool/pl.u-NpXmza7tmR4qb0g?l=en"
-            target="_blank"
-          >
-            Go to Apple Music
-          </a>
-        </GoLink>
 
         <div>
           <MusicList
@@ -64,14 +69,6 @@ const Music = styled.div`
   }
 `;
 
-const GoLink = styled.div`
-  color: #2b92fd;
-  margin-bottom: 16px;
-  &:hover {
-    color: gray;
-  }
-`;
-
 const MusicList = styled.iframe`
   width: 100%;
   max-width: 660px;
@@ -81,9 +78,10 @@ const MusicList = styled.iframe`
   border: none;
 `;
 
-const MediaType = styled.h3`
+const MediaType = styled.div`
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
   svg {
     margin-right: 8px;
   }
@@ -92,6 +90,22 @@ const MediaType = styled.h3`
   }
   svg.youtube {
     color: #ff0000;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+`;
+
+const GoLink = styled.div`
+  display: flex;
+  align-items: center;
+  color: #2b92fd;
+  font-size: 0.8rem;
+
+  &:hover {
+    color: gray;
   }
 `;
 
