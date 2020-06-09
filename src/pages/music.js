@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { AiFillApple, AiFillYoutube } from "react-icons/ai";
 import { Layout } from "../structures";
 
 const MusicPage = () => {
@@ -8,6 +8,20 @@ const MusicPage = () => {
     <Layout title="Music">
       <Music className="posts-list _responsive">
         <h2 className="list-title">📻 Music List</h2>
+        <MediaType>
+          <AiFillYoutube />
+          Youtube Music
+        </MediaType>
+        <MusicList
+          src="https://www.youtube.com/embed/videoseries?list=PLDxXNjzT5E_lrOQvFU0WYO7S1hh79pWWD"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></MusicList>
+        <MediaType>
+          <AiFillApple />
+          Apple Music
+        </MediaType>
         <div>
           <MusicList
             allow="autoplay *; encrypted-media *;"
@@ -36,9 +50,18 @@ const Music = styled.div`
 const MusicList = styled.iframe`
   width: 100%;
   max-width: 660px;
+  min-height: 340px;
   overflow: hidden;
   background: transparent;
   border: none;
+`;
+
+const MediaType = styled.h3`
+  display: flex;
+  align-items: center;
+  > svg {
+    margin-right: 8px;
+  }
 `;
 
 export default MusicPage;
