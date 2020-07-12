@@ -4,12 +4,13 @@ import Tag from "../Tag";
 import { Link } from "gatsby";
 
 export default ({ url, title, date, tags }) => {
+  const tagList = tags || [];
   const PostItem = (
     <Styled.PostItem className={url ? "active" : ""}>
       <h2 className="title">{`📝 ${title}`}</h2>
       <p className="date">{date}</p>
       <ul className="tags">
-        {tags.map((tag) => (
+        {tagList.map((tag) => (
           <li className="tag-container">
             <Tag name={tag} />
           </li>

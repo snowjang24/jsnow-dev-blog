@@ -2,6 +2,7 @@
 title: Front to the ES2020 
 date: 2020-07-15 00:00:00
 author: snowjang24
+tags : ['javascript', 'es2020']
 category: Javascript
 ---
 
