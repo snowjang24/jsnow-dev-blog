@@ -9,7 +9,7 @@ export default ({ url, title, date, tags }) => {
       <h2 className="title">{`📝 ${title}`}</h2>
       <p className="date">{date}</p>
       <ul className="tags">
-        {tags.map(tag => (
+        {tags.map((tag) => (
           <li className="tag-container">
             <Tag name={tag} />
           </li>
