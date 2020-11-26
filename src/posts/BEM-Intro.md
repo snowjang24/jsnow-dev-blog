@@ -8,11 +8,9 @@ tags: ["css방법론", "bem"]
 
 ## BEM 소개
 
-[2019 프론트앤드 개발 로드맵](https://github.com/devJang/developer-roadmap)을 보면 CSS 아키텍쳐로 [BEM](https://en.bem.info/)을 추천하고 있다(여기서 추천하는 기술은 많이 쓰이는 기술들이라, 전체적으로 한 번 공부해보는 것이 좋을 것 같다).
+[2020 프론트앤드 개발 로드맵](https://github.com/devJang/developer-roadmap)을 보면 CSS 아키텍쳐로 [BEM](https://en.bem.info/)을 추천하고 있다(여기서 추천하는 기술은 많이 쓰이는 기술들이라, 전체적으로 한 번 공부해보는 것이 좋을 것 같다).
 
 ![image](https://user-images.githubusercontent.com/26768201/100326299-1f229400-300d-11eb-8e29-e9f5530e5272.png)
-
-2017년에는 추천하는 기술에 포함되지 않았던 BEM은 2018년에 들어 추천하는 기술에 올랐고, 2019년에는 여전히 추천하는 기술에 포함돼있지만 [CSS in JS](https://medium.com/@okys2010/모던-css-1-css-in-js-c1c53d9bbbc9)의 등장으로 금방 자리를 내어줄 것 같다.
 
 > CSS in JS는 React같은 Front-End Framework에 최적화되어 있다.
 > 프레임워크의 사용이 주를 이루는 요즘, BEM이 중요하지 않아질 수 있겠지만, 배워두는 것이 좋을 것 같다.
@@ -44,13 +42,13 @@ CSS 방법론에는 OOCSS, BEM SMACSS등이 있는데, 이번 포스팅에서는
 
 ### BEM 이란?
 
-**BEM**은 **Block__Element_Modifier**의 약자로, 웹 UI를 블럭 단위로 컴포넌트화하여 개발하는 개발 방식이다.
+**BEM**은 **Block__Element_Modifier**의 약자로, 웹 UI를 블럭 단위로 컴포넌트화하여 개발하는 개발 방식이다. 
 
 > **컴포넌트(Component)** 란? 독립적이고 완결된 뷰를 생성하기 위하여 HTML, CSS, 자바스크립트를 하나의 단위로 묶는 것을 의미한다. 쉽게 말해, 웹을 구성하는 동작 가능한 하나의 부품이다.
 
 <img width="1440" alt="image-20190526163009708-8855809" src="https://user-images.githubusercontent.com/26768201/100326488-61e46c00-300d-11eb-973a-5c0b0e3eb2e2.png">
 
-컴포넌트화하여 개발하면, 아래 그림과 같이 배치를 바꿔야 하는 상황에서 많은 코드 변화 없이 유동적인 배치가 가능해진다.
+컴포넌트화하여 개발하면, 아래 그림과 같이 배치를 바꿔야 하는 상황에서 많은 코드 변화 없이 유동적인 배치가 가능해진다. [아토믹 디자인(Atomic Design)](https://ui.toast.com/weekly-pick/ko_20200213)의 목표와도 같다.
 
 ![0bbhZyhaBhRzqBh5nLYQEnFpDTk](https://user-images.githubusercontent.com/26768201/100326633-8a6c6600-300d-11eb-83ac-1f97ef2ed3ff.png)
 ![v80tUiEPgSQtyW9a7C8rxdn-5EM](https://user-images.githubusercontent.com/26768201/100326639-8b9d9300-300d-11eb-9450-2b231aa18698.png)
