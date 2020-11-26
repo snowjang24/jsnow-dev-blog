@@ -1,6 +1,6 @@
 ---
 title: CSS 방법론, BEM에 대하여
-date: 2019-05-26 12:50:41
+date: 2020-11-26 12:50:41
 tags: ["css방법론", "bem"]
 ---
 
@@ -10,7 +10,7 @@ tags: ["css방법론", "bem"]
 
 [2019 프론트앤드 개발 로드맵](https://github.com/devJang/developer-roadmap)을 보면 CSS 아키텍쳐로 [BEM](https://en.bem.info/)을 추천하고 있다(여기서 추천하는 기술은 많이 쓰이는 기술들이라, 전체적으로 한 번 공부해보는 것이 좋을 것 같다).
 
-<img src="/BEM-intro/image-20190526130928185-8843768.png" width="80%">
+![image](https://user-images.githubusercontent.com/26768201/100326299-1f229400-300d-11eb-8e29-e9f5530e5272.png)
 
 2017년에는 추천하는 기술에 포함되지 않았던 BEM은 2018년에 들어 추천하는 기술에 올랐고, 2019년에는 여전히 추천하는 기술에 포함돼있지만 [CSS in JS](https://medium.com/@okys2010/모던-css-1-css-in-js-c1c53d9bbbc9)의 등장으로 금방 자리를 내어줄 것 같다.
 
@@ -28,7 +28,7 @@ tags: ["css방법론", "bem"]
 
 인터넷에서 어떤 규칙을 갖고 작성하는 게 좋다는 가이드라인을 찾는 것조차, 개발 공부 초짜였던 나에게는 너무나 어려운 일이었다. 그렇다고 주먹구구식으로 개발하기에는 항상 같은 문제에 부딪혔고, 조금만 규모가 커질 때마다 곤란해 하다가 모든 것을 놓아버리는 방치형 개발을 주로 하였다.
 
-<img src="/BEM-intro/image-20190526160120034-8854080.png" width="90%">
+<img width="942" alt="image-20190526160120034-8854080" src="https://user-images.githubusercontent.com/26768201/100326421-4b3e1500-300d-11eb-867e-c047d15e9c53.png">
 
 나중에 CSS 방법론에 대해 알게 되었고, 그 중 BEM을 추천한다는 것까지 알게 되었다. 그 생각까지가 BEM에 대한 마지막 기억이다.
 
@@ -36,7 +36,7 @@ tags: ["css방법론", "bem"]
 
 ### CSS 방법론
 
-**CSS 방법론(CSS Methodology)**은 모듈화, 재사용 가능성과 확장 가능성 등을 고려하여 **CSS를 잘 작성하기 위한 지침**이다. 쉽게 말해, 개발자가 코드를 잘 작성하고 유지∙보수하기 쉽게 만들기 위한 CSS 작성 규칙이다. 프레임워크나 라이브러리 같은 것이 아니다.
+**CSS 방법론(CSS Methodology)** 은 모듈화, 재사용 가능성과 확장 가능성 등을 고려하여 **CSS를 잘 작성하기 위한 지침**이다. 쉽게 말해, 개발자가 코드를 잘 작성하고 유지∙보수하기 쉽게 만들기 위한 CSS 작성 규칙이다. 프레임워크나 라이브러리 같은 것이 아니다.
 
 CSS 방법론에는 OOCSS, BEM SMACSS등이 있는데, 이번 포스팅에서는 그중 가장 많이 쓰이는 BEM에 대해서만 다루려 한다.
 
@@ -46,19 +46,18 @@ CSS 방법론에는 OOCSS, BEM SMACSS등이 있는데, 이번 포스팅에서는
 
 **BEM**은 **Block__Element_Modifier**의 약자로, 웹 UI를 블럭 단위로 컴포넌트화하여 개발하는 개발 방식이다.
 
-> **컴포넌트(Component)**란? 독립적이고 완결된 뷰를 생성하기 위하여 HTML, CSS, 자바스크립트를 하나의 단위로 묶는 것을 의미한다. 쉽게 말해, 웹을 구성하는 동작 가능한 하나의 부품이다.
+> **컴포넌트(Component)** 란? 독립적이고 완결된 뷰를 생성하기 위하여 HTML, CSS, 자바스크립트를 하나의 단위로 묶는 것을 의미한다. 쉽게 말해, 웹을 구성하는 동작 가능한 하나의 부품이다.
 
-<img src="/BEM-intro/image-20190526163009708-8855809.png" width="90%">
+<img width="1440" alt="image-20190526163009708-8855809" src="https://user-images.githubusercontent.com/26768201/100326488-61e46c00-300d-11eb-973a-5c0b0e3eb2e2.png">
 
 컴포넌트화하여 개발하면, 아래 그림과 같이 배치를 바꿔야 하는 상황에서 많은 코드 변화 없이 유동적인 배치가 가능해진다.
 
-<img src="/BEM-intro/v80tUiEPgSQtyW9a7C8rxdn-5EM.png" width="80%">
-
-<img src="/BEM-intro/0bbhZyhaBhRzqBh5nLYQEnFpDTk.png" width="80%">
+![0bbhZyhaBhRzqBh5nLYQEnFpDTk](https://user-images.githubusercontent.com/26768201/100326633-8a6c6600-300d-11eb-83ac-1f97ef2ed3ff.png)
+![v80tUiEPgSQtyW9a7C8rxdn-5EM](https://user-images.githubusercontent.com/26768201/100326639-8b9d9300-300d-11eb-9450-2b231aa18698.png)
 
 또한, 코드를 재사용하는 데 있어 큰 장점을 가진다.
 
-<img src="/BEM-intro/VBlEdksG7XkL4DLPWe4rcYb5hGo.png" width="80%">
+![VBlEdksG7XkL4DLPWe4rcYb5hGo](https://user-images.githubusercontent.com/26768201/100326669-948e6480-300d-11eb-9566-47502e2ebed8.png)
 
 먼저, BEM은 `class`작명 규칙을 기본으로 한다. BEM에 따라 `class`를 작명할 때, 이름만 봐도 어떤 기능을 하는지 알 수 있도록 이름을 명확하게 짓는다. 작명 규칙 뿐만 아니라 파일 구조에 관한 규칙 또한 존재한다. 이러한 규칙들을 통해 개발 및 유지∙보수가 쉬운 코드를 작성하는 것을 목표로 한다.
 
@@ -94,7 +93,7 @@ BEM의 핵심 개념은 다음과 같다.
 
 블럭은 각 컴포넌트를 담는 **그릇**과 같다. 이렇게 외부에 영향을 주지 않는 규칙이 있는 이유는, **재사용성**과 **확장성**을 고려하기 때문이다. 만약 여백이나 위치와 관련된 스타일이 적용되어 있다면 해당 블럭을 다른 곳에 이식하여 사용하려 할 때, 다시 여백이나 위치를 설정해야 하는 등의 귀찮은 일이 발생할 수 있다.
 
-<img src="/BEM-intro/kFetIbKxQdABHhUecbic45Il0Bg-20190528110849730.png" width="80%">
+![kFetIbKxQdABHhUecbic45Il0Bg](https://user-images.githubusercontent.com/26768201/100326710-a53eda80-300d-11eb-9e58-ad4cd5c69c22.png)
 
 추가로, 블럭을 사용할 때는 중첩해서 사용할 수 있다. 블럭 안에 블럭이 있다고 해서 이상하게 생각할 필요가 없다. 필요에 따라 중첩하여 사용할 수 있다.
 
@@ -114,7 +113,7 @@ BEM의 핵심 개념은 다음과 같다.
 
 **요소(Element)**는 단독으로 사용할 수 없는, **블럭의 부분적인 구성요소**다. 요소 역시 블럭과 동일하게 목적(or 의미)을 기반으로 작명한다. 이름을 구성할 때 반드시 블럭 이름과 함께 적어준다. ex) `블럭이름__요소이름`
 
-<img src="/BEM-intro/cPrdQL4EZZdhPIrcYOayygPBSm4.png" width="80%">
+![cPrdQL4EZZdhPIrcYOayygPBSm4](https://user-images.githubusercontent.com/26768201/100326753-b2f46000-300d-11eb-88b8-746304af54c6.png)
 
 만약, `search-form`블럭이 있고, 그 내부에는 `input`과 `button`요소가 있는 경우에는 다음과 같이 작성한다.
 
@@ -208,11 +207,11 @@ CSS에서 스타일을 작성할 때 다음과 같이 셀렉터를 사용할 것
 
 ### 3. 수식어(Modifier)
 
-**수식어(Modifier)**는 블럭이나 요소의 **모양**(ex. size\_s, theme\_islands), **상태**(ex. disabled, focused) 그리고 **행동**(ex. derections\_left-top)을 정의한다. 기본적으로 `블럭이름_수식어이름` , `블럭이름__요소이름_수식어이름` 의 형태로 작성한다.
+**수식어(Modifier)** 는 블럭이나 요소의 **모양**(ex. size\_s, theme\_islands), **상태**(ex. disabled, focused) 그리고 **행동**(ex. derections\_left-top)을 정의한다. 기본적으로 `블럭이름_수식어이름` , `블럭이름__요소이름_수식어이름` 의 형태로 작성한다.
 
 > 기억하기로는, 이전에 BEM방법론에서 Modifier는 _(언더바 한 개)가 아닌 --(하이픈 두 개)를 썼던 것으로 기억한다. 대다수 자료들이 이를 기반으로 만들어졌다. ~~기왕이면 바뀌기 전∙후 모두를 아는 것이 좋을 것 같다.~~ 둘 다 가능하다. 사용자 편의에 따라 규칙을 정하고 사용하면 된다.
 
-<img src="/BEM-intro/WSU5nwZla7p44W2tdxiP371xx38.png" width="80%">
+![WSU5nwZla7p44W2tdxiP371xx38](https://user-images.githubusercontent.com/26768201/100326788-c1db1280-300d-11eb-8e9a-069339879aa0.png)
 
 Modifier를 통해 앞의 블럭과 요소가 묘사하지 않았던 모양, 상태, 행동을 나타낼 수 있다. 간단한 예시를 통해 살펴 보자. `search-form`블럭의 `button`요소는 다음과 같은 스타일을 갖는다. 버튼이 공통적으로 가질 스타일을 정의하고 있다.
 
@@ -238,7 +237,7 @@ Modifier를 통해 앞의 블럭과 요소가 묘사하지 않았던 모양, 상
 
 공통적인 속성에다가 사이즈만 정의하여 다양한 버튼을 쉽게 만들 수 있다.
 
-<img src="/BEM-intro/image-20190603153754243-9543874.png" width="50%">
+<img width="320" alt="image-20190603153754243-9543874" src="https://user-images.githubusercontent.com/26768201/100326801-c8698a00-300d-11eb-9b79-747a6fc9eedb.png">
 
 이러한 수식어의 타입은 크게 Boolean과 Key-value로 나눌 수 있다.
 
@@ -354,7 +353,7 @@ search-form/                           # Directory of the search-form
 
 [BEM의 공식 문서](https://en.bem.info/methodology/quick-start/)를 읽으며 이해하는 데 큰 문제가 없었으나, 뭔가 크게 와닿지 않는다. 그러면 ["BEM I (finally) understand", Andrei Popa](https://m.alphasights.com/bem-i-finally-understand-b0c74815d5b0)라는 글을 읽어보면 모호한 개념들이 단번에 이해된다. 정리겸 마지막 정리 예시를 한 번 가져와 보았다.
 
-<img src="/BEM-intro/1*BMQkYNpRoLyweufcIW0Rcg-20190527221604967.jpeg" width="80%">
+![1_BMQkYNpRoLyweufcIW0Rcg](https://user-images.githubusercontent.com/26768201/100326835-d4554c00-300d-11eb-84bc-b79ceee64d63.jpeg)
 
 이 사진에 있는 풍경을 코드로 바꿔보면 다음과 같다. 먼저 풍경(`scenery`)을 블럭으로 만들어주고 그 내부에 구성 요소인 `sky`, `ground`, `people`을 요소로 추가한다.
 
@@ -411,9 +410,9 @@ search-form/                           # Directory of the search-form
 
 블럭과 요소 그리고 수정자는 다음과 같이 정리할 수 있다.
 
-- **블럭(Block)**은 요소에 대한 컨테이너이며 최소한의 스타일을 적용한다.
-- **요소(Element)**는 블럭 내부를 구성하는 구성 요소다. 본격적인
-- **수정자(Modifiers)**는 블록이나 요소의 기본 속성에 약간의 변화를 추가한다.
+- **블럭(Block)** 은 요소에 대한 컨테이너이며 최소한의 스타일을 적용한다.
+- **요소(Element)** 는 블럭 내부를 구성하는 구성 요소다. 본격적인
+- **수정자(Modifiers)** 는 블록이나 요소의 기본 속성에 약간의 변화를 추가한다.
 
 BEM의 기본적인 개념에 관한 내용은 그리 어렵지 않다. 하지만 이를 직접 프로젝트에 적용하면 꽤 어렵다. 대체 어디까지가 블럭이지? 요소와 블럭을 섞어서 써도 된다 했는데 그냥 블럭 안에 요소로 둘까? 등 모호한 부분이 많아 난처했다. 이에 대한 답은 [공식 도큐먼트](https://en.bem.info/methodology/css/#how-do-i-make-an-html-wrapper)에 자세한 예시와 함께 쓰여있다. 이런 상황별 예제를 통해 BEM을 익히면 많은 도움이 될 것 같다.
 
@@ -421,9 +420,9 @@ BEM의 기본적인 개념에 관한 내용은 그리 어렵지 않다. 하지�
 
 ### 내가 느낀 BEM
 
-BEM방식은 굉장히 유용하다. 스포츠 경기의 국제 룰처럼, CSS 개발에서 하나의 정해진 **명명 규칙(Naming Convention)**이 있다는 것은 혼란으로 가득찬 CSS 개발에 다양한 이점으로 작용한다.
+BEM방식은 굉장히 유용하다. 스포츠 경기의 국제 룰처럼, CSS 개발에서 하나의 정해진 **명명 규칙(Naming Convention)** 이 있다는 것은 혼란으로 가득찬 CSS 개발에 다양한 이점으로 작용한다.
 
-<img src="/BEM-intro/SSI_20180115154533_V.jpg" width="40%">
+![SSI_20180115154533_V](https://user-images.githubusercontent.com/26768201/100326881-e1723b00-300d-11eb-95c5-c7645b071199.jpg)
 
 먼저, 내가 내 코드를 다시 읽었을 때 혹은 남이 내 코드를 읽었을 때 코드와 그 의도를 이해하기 쉬워진다. 또한 컴포넌트화, 깔끔한 코드 그리고 누구나 수긍할 수 있는 명명 규칙은 협업하는데에도 많은 도움이 된다. 마지막으로, 구성된 디자인을 코드로 구현할 때 가이드라인과 같이 작용하여 어떻게 구성할지 헤매지 않도록 도움을 준다.
 
